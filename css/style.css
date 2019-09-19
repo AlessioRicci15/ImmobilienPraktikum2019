@@ -1,17 +1,13 @@
 header, footer, nav, main, html { 
   text-align:center;
-  border: 1px solid black;
 }
-header{
-  height: 20%;
+header, footer, nav{
+  border: 1px solid black;
 }
 .knopf{
   background-color: white;
   margin: 0;
   padding: 1;
-}
-nav, footer{
-  height: 10%;
 }
 article{
   margin: 5px;
@@ -49,7 +45,6 @@ td{
 }
 main{
   background-color: rgb(231, 185, 142, 0.808);
-  height: 60%;
   min-height: 600px;
   text-align: left;
 }

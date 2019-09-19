@@ -1,20 +1,14 @@
 <?php
-include("dbcon.php");
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    }
-    
+    include("dbcon.php");
     $sql = "SELECT *
-    FROM `immobilien` 
-    WHERE immobilien.id =" . intval($_GET['id']);
-
+            FROM `immobilien` 
+            WHERE immobilien.id =" . intval($_GET['id']);
     $result = $conn->query($sql);
-    
-    $deleter = "DELETE FROM immobilien WHERE immobilien.id = " . intval($_GET['id']);
-
+    $deleter = "DELETE FROM immobilien 
+                WHERE immobilien.id = " . intval($_GET['id']);
     if ($conn->query($deleter)){
-        include("header.php");
+        include("head.php");
+        include("headerremove.php");
         include("nav.php");
         include("maindel.php");
         include("footer.php");

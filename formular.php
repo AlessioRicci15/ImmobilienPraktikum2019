@@ -1,34 +1,21 @@
 <form method="post" action="sendform.php">
     Adresse:
     <br>
-    <textarea name="adresse" placeholder="Adresse der Immobilie..." style="width: 50%; height:200px;"></textarea>
+        <textarea name="adresse" placeholder="Adresse der Immobilie..." style="width: 50%; height:200px;"></textarea>
     <br>
     Land:
     <br>
     <?php
-        include("dbcon.php");
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        $sql = "SELECT `land`.`LandID`, `land`.`Landname`
-            FROM `land`
-            ORDER BY Landname ASC";
-        $result = $conn->query($sql);
-        echo '<select name="land">';
-        while ($row = $result->fetch_assoc()){
-        echo '<option value="'.$row['LandID'].'">'.$row['Landname'].'</option>';
-        }
-        echo '</select>';
+        include("landwahl.php");
     ?>
     <br> 
     Baujahr:
     <br>
-    <input type="text" name="baujahr" placeholder="2019" style="width: 250px"><br>
+        <input type="text" name="baujahr" placeholder="2019" style="width: 250px"><br>
     Preis:
     <br>
-    <input type="text" name="preis"  placeholder="1000000" style="width: 250px">
+        <input type="text" name="preis"  placeholder="1000000" style="width: 250px">
     <br><br>
-    <input type="submit" value='Absenden' style="width: 250px">   
-    <input type="reset" value='Zurücksetzten' style="width: 250px" >
+        <input type="submit" value='Absenden' style="width: 250px">   
+        <input type="reset" value='Zurücksetzten' style="width: 250px" >
 </form>
