@@ -12,7 +12,7 @@
     $Land = $row['Landname'];
 ?>
 
-<form method="post" action="sendedit.php">
+<form method="post" action="sendeditpropertyformular.php">
         <input type="hidden" id="id" name="id" value="<?php echo $row['id'] ?>">
     Adresse:
     <br>

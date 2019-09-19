@@ -1,6 +1,6 @@
 <?php
     include("databaseconnaction.php");
-    include("getformularvariabele.php");
+    include("getformularvariable.php");
     $lander = "SELECT `land`.`LandID`
                 FROM `land` 
                 WHERE land.Landname = '$land'";

@@ -1,4 +1,4 @@
-<form method="post" action="sendform.php">
+<form method="post" action="sendcreatpropertyformular.php">
     Adresse:
     <br>
         <textarea name="adresse" placeholder="Adresse der Immobilie..." style="width: 50%; height:200px;"></textarea>
