@@ -12,12 +12,12 @@
                     <h3>Home</h3>
                 </li>
             </a>
-            <a href="Immobilien.php">
+            <a href="propertycontainer.php">
                 <li class="active">
                     <h3>Immobilien</h3>
                 </li>
             </a>
-            <a href="Impressum.php">
+            <a href="impressum.php">
                 <li>
                     <h3>Impressum</h3>
                 </li>
@@ -26,9 +26,9 @@
     </nav>
     <main>
         <article>
-            <h4>Immobilien <button type="button"><a href="creatimmo.php">Erfasse eine Immobilie</a></button> </h4>
+            <h4>Immobilien <button type="button"><a href="creatpropertycontainer.php">Erfasse eine Immobilie</a></button> </h4>
             <?php
-                include("db.php");
+                include("propertytable.php");
             ?>            
         </article>
     </main>

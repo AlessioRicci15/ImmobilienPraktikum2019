@@ -12,7 +12,7 @@
         <article>
             <h4>Immobilie</h4>
             <?php
-                include("dbinf.php");
+                include("propertydetailview.php");
             ?>
         </article>
     </main>

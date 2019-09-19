@@ -1,6 +1,6 @@
 <?php
-    include("dbcon.php");
-    include("variabeln.php");
+    include("databaseconnaction.php");
+    include("getformularvariabele.php");
     $lander = "SELECT `land`.`LandID`
                 FROM `land` 
                 WHERE land.Landname = '$land'";
@@ -12,9 +12,9 @@
                 WHERE immobilien.id =" . intval($_POST['id']);
     if ($conn->query($changer)){
         include("head.php");
-        include("headeredit.php");
+        include("headereditproperty.php");
         include("nav.php");
-        include("mainedi.php");
+        include("maineditproperty.php");
         include("footer.php");
         }
         else{

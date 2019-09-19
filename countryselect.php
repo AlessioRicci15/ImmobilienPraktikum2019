@@ -1,5 +1,5 @@
 <?php
-    $landausgabe =  include("dbcon.php");
+    $landausgabe =  include("databaseconnaction.php");
                     $sql = "SELECT `land`.`LandID`, `land`.`Landname`
                             FROM `land`
                             ORDER BY Landname ASC";

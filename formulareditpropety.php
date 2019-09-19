@@ -1,5 +1,5 @@
 <?php
-    include("dbcon.php");
+    include("databaseconnaction.php");
     $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`, `immobilien`.`lat`, `immobilien`.`lng`
             FROM `immobilien` 
             LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
@@ -22,7 +22,7 @@
     <br>
 
     <?php
-        include("dbcon.php");
+        include("databaseconnaction.php");
         $sql = "SELECT `land`.`LandID`, `land`.`Landname`
                 FROM `land`
                 ORDER BY Landname ASC";

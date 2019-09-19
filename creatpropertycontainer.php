@@ -12,7 +12,7 @@
         <article>
             <h4>Erfasse eine Immobilie</h4>
             <?php
-                include("formular.php");
+                include("formularcreatproperty.php");
             ?>            
         </article>
     </main>

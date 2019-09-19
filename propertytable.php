@@ -1,12 +1,8 @@
 <?php
-    include("dbcon.php"); 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`
-    FROM `immobilien`
-    LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`";
+    include("databaseconnaction.php"); 
+    $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`
+            FROM `immobilien`
+            LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     echo "
@@ -22,7 +18,7 @@ if ($result->num_rows > 0) {
         echo "
         <tr>
             <td class=p1>
-                <a href='Show.php?id={$row['id']}'>
+                <a href='propertydetailcontainer.php?id={$row['id']}'>
                     {$row['Ort']}
                 </a>
             </td>
@@ -36,13 +32,13 @@ if ($result->num_rows > 0) {
             {$row['Preis']}
         </td>
         <td class=p5 class=lang>
-            <a href=Show.php?id={$row['id']}> 
+            <a href=propertydetailcontainer.php?id={$row['id']}> 
                 <i class='fa fa-eye'></i> Show<br>
             </a>
-            <a href=Edit.php?id={$row['id']}> 
+            <a href=editcontainer.php?id={$row['id']}> 
                 <i class='fa fa-edit'></i> Edit<br>
             </a>
-            <a href=Remove.php?id={$row['id']}> 
+            <a href=removeproperty.php?id={$row['id']}> 
                 <i class='fa fa-trash'></i> Remove
             </a>
         </td>
