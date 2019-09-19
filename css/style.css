@@ -1,0 +1,190 @@
+header, footer, nav, main, html { 
+  text-align:center;
+  border: 1px solid black;
+}
+header{
+  height: 20%;
+}
+.knopf{
+  background-color: white;
+  margin: 0;
+  padding: 1;
+}
+nav, footer{
+  height: 10%;
+}
+article{
+  margin: 5px;
+  padding: 5px;
+}
+li {
+  float: left;
+}
+nav a {
+  display: block;
+}
+nav li{
+  list-style-type: none;
+  color: black;
+  width: 33.33%;
+  text-align: center;
+}
+header, footer{
+  background-color: rgb(131, 228, 131, 0.808);
+}
+table{
+  width: 100%;
+}
+body{
+  font-family: Verdana, Arial;
+  margin: 0;
+  height: 100%;
+}
+th{
+  text-align: left;
+  padding: 5px;
+}
+td{
+  height: 20px;
+}
+main{
+  background-color: rgb(231, 185, 142, 0.808);
+  height: 60%;
+  min-height: 600px;
+  text-align: left;
+}
+article{
+  margin: 0;
+}
+h1, h2, h3, h4, a{
+  color: black;
+  text-decoration: none;
+}
+table{
+  background-color: rgb(236, 223, 214);
+  color: black;
+}
+nav dl{
+  margin-top: 10px;
+}
+nav li:hover {
+  background-color: rgb(68, 216, 68);
+  color: black;
+}
+.active{
+  background-color: rgb(106, 184, 119);
+}
+td, th{
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 5px;
+}
+nav{
+  height: 75px;
+  width: 99.9%;
+  background-color: rgb(180, 247, 171);
+}
+table a:hover{
+  text-decoration-line: underline;
+}
+.small{
+  font-size: 75%;
+}
+button{
+  margin: 10px;
+  margin-left: 20px;
+  margin-bottom: 0;
+  padding: 10px;
+  background-color: antiquewhite;
+}
+.wichtig{
+  size: 50px;
+  text-align: center;
+}
+.zuruck{
+  size: 25px;
+  text-align: center;
+}
+main a:hover{
+  text-decoration-line: underline;
+}
+td, th{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lang{
+  width: 50px;
+}
+
+  @media screen and (max-width: 1000px) {
+    .p3{
+      display:none;
+    }
+    td, th{
+      max-width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    nav li{
+      display: block;
+      float: left;
+    }
+    .p2{
+      display:none;
+    }
+    .p3{
+      display:none;
+    }
+    td, th{
+      max-width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .p2{
+      display:none;
+    }
+    .p3{
+      display:none;
+    }
+    .p4{
+      display:none;
+    }
+    .p5{
+      max-width: 50px;
+    }
+    td, th{
+      max-width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    nav a {
+      display: block;
+      float: left;
+      text-align: center;
+      width: 100%;
+    }
+    nav{
+      height: 200px;
+      width: 100%;
+      background-color: rgb(180, 247, 171);
+      text-align: center;
+    }
+    nav li{
+      list-style-type: none;
+      color: black;
+      width: 100%;
+      text-align: center;
+    }
+  }

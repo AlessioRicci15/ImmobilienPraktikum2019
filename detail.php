@@ -1,0 +1,22 @@
+<?php
+ include("head.php");
+?>
+<body>
+<header>
+    <h1>Deteil</h1>
+    </header>
+    <?php
+    include("nav.php");
+    ?>
+    <main>
+        <article>
+            <h4>Immobilie</h4>
+            <?php
+            include("dbinf.php");
+            ?>
+        </article>
+    </main>
+<?php
+include("footer.php");
+?>
+</body>
