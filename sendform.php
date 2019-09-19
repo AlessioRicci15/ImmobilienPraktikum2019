@@ -9,14 +9,8 @@
     die("Connection failed: " . $conn->connect_error);
     }
     else{
-    $lander = "SELECT `land`.`LandID`
-    FROM `land` 
-    WHERE land.Landname = '$land'";
-    $result = $conn->query($lander);
-    $row = $result->fetch_assoc();
-    $landid = "{$row['LandID']}";
     $insert = "INSERT INTO immobilien (Ort, Baujahr, Preis, Land)
-    values ('$adresse','$baujahr','$preis', '$landid')";
+    values ('$adresse','$baujahr','$preis', '$land')";
     if ($conn->query($insert)){
         include("header.php");
         include("nav.php");
