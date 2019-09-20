@@ -1,5 +1,5 @@
 <?php
-    include("head.php");
+    include("layout/head.php");
 ?>
 <body>
     <header>
@@ -34,6 +34,6 @@
         </article>
     </main>
     <?php
-        include("footer.php");
+        include("layout/footer.php");
     ?>
 </body>

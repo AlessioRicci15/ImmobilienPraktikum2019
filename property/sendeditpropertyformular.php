@@ -1,6 +1,6 @@
 <?php
-    include("databaseconnaction.php");
-    include("getformularvariable.php");
+    include("../sql/databaseconnaction.php");
+    include("../sql/getformularvariable.php");
     $lander = "SELECT `land`.`LandID`
                 FROM `land` 
                 WHERE land.Landname = '$land'";
@@ -11,11 +11,11 @@
                 SET Ort='$adresse', Baujahr='$baujahr', Preis='$preis', Land=$landid
                 WHERE immobilien.id =" . intval($_POST['id']);
     if ($conn->query($changer)){
-        include("head.php");
-        include("headereditproperty.php");
-        include("nav.php");
-        include("maineditproperty.php");
-        include("footer.php");
+        include("../layout/head.php");
+        include("../layout/headereditproperty.php");
+        include("../layout/nav.php");
+        include("../layout/maineditproperty.php");
+        include("../layout/footer.php");
         }
         else{
             echo "Error: ". $changer ."". $conn->error;

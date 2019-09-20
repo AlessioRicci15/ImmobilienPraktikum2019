@@ -1,12 +1,12 @@
 <?php
-    include("head.php");
+    include("../layout/head.php");
 ?>
 <body>
     <header>
         <h1>Immobilie bearbeiten</h1>
     </header>
     <?php
-        include("nav.php");
+        include("../layout/nav.php");
     ?>
     <main>
         <article>
@@ -17,7 +17,7 @@
         </article>
     </main>
     <?php
-        include("footer.php");
+        include("../layout/footer.php");
     ?>
 </body>
     

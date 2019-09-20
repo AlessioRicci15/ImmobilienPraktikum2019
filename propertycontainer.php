@@ -1,5 +1,5 @@
 <?php
-    include("head.php");
+    include("layout/head.php");
 ?>
 <body>
     <header>
@@ -26,13 +26,13 @@
     </nav>
     <main>
         <article>
-            <h4>Immobilien <button type="button"><a href="creatpropertycontainer.php">Erfasse eine Immobilie</a></button> </h4>
+            <h4>Immobilien<a href="property/creatpropertycontainer.php"><button type="button">Erfasse eine Immobilie</button></a></h4>
             <?php
-                include("propertytable.php");
+                include("property/propertytable.php");
             ?>            
         </article>
     </main>
     <?php
-        include("footer.php");
+        include("layout/footer.php");
     ?>
 </body>
