@@ -26,7 +26,7 @@
     </nav>
     <main>
         <article>
-            <h4>Immobilien<a href="property/creatpropertycontainer"><button type="button">Erfasse eine Immobilie</button></a></h4>
+            <h4>Immobilien  <a href="property/creatpropertycontainer"><button type="button">Erfasse eine Immobilie</button></a></h4>
             <?php
                 include("property/propertytable.php");
             ?>            

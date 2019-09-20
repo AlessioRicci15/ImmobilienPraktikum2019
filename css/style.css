@@ -45,7 +45,7 @@ td{
 }
 main{
   background-color: rgb(231, 185, 142, 0.808);
-  min-height: 600px;
+  min-height: 100%;
   text-align: left;
 }
 article{
@@ -88,9 +88,6 @@ table a:hover{
   font-size: 75%;
 }
 button{
-  margin: 10px;
-  margin-left: 20px;
-  margin-bottom: 0;
   padding: 10px;
   background-color: antiquewhite;
 }
