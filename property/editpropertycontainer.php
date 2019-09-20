@@ -20,4 +20,3 @@
         include("../layout/footer.php");
     ?>
 </body>
-    

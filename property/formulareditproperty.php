@@ -1,9 +1,10 @@
 <?php
     include("../sql/databaseconnaction.php");
+    include("../sql/urlsplit.php");
     $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`, `immobilien`.`lat`, `immobilien`.`lng`
             FROM `immobilien` 
             LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
-            WHERE immobilien.id =" . intval($_GET['id']);
+            WHERE immobilien.id =" . $id;
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     $Baujahr = $row['Baujahr'];
@@ -11,9 +12,7 @@
     $Ort = $row['Ort'];
     $Land = $row['Landname'];
 ?>
-
-<form method="post" action="sendeditpropertyformular">
-        <input type="hidden" id="id" name="id" value="<?php echo $row['id'] ?>">
+<form method="post" action="../sendeditpropertyformular/<?php echo $row['id'] ?>">
     Adresse:
     <br>
         <input name="adresse" type="text"  value="<?php echo $Ort;?>" style="width: 50%; height:30px;">
@@ -48,4 +47,3 @@
     <br><br>
         <button type="submit">Speichern</button>
 </form>
-

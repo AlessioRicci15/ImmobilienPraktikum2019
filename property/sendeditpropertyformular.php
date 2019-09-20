@@ -1,5 +1,6 @@
 <?php
     include("../sql/databaseconnaction.php");
+    include("../sql/urlsplit.php");
     include("../sql/getformularvariable.php");
     $lander = "SELECT `land`.`LandID`
                 FROM `land` 
@@ -9,7 +10,7 @@
     $landid = "{$row['LandID']}";
     $changer = "UPDATE immobilien 
                 SET Ort='$adresse', Baujahr='$baujahr', Preis='$preis', Land=$landid
-                WHERE immobilien.id =" . intval($_POST['id']);
+                WHERE immobilien.id =" . $id; // intval($_POST['id'])
     if ($conn->query($changer)){
         include("../layout/head.php");
         include("../layout/headereditproperty.php");

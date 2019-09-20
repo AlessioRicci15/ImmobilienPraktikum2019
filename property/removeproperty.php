@@ -1,11 +1,12 @@
 <?php
     include("../sql/databaseconnaction.php");
+    include("../sql/urlsplit.php");
     $sql = "SELECT *
             FROM `immobilien` 
-            WHERE immobilien.id =" . intval($_GET['id']);
+            WHERE immobilien.id =" . $id;
     $result = $conn->query($sql);
     $deleter = "DELETE FROM immobilien 
-                WHERE immobilien.id = " . intval($_GET['id']);
+                WHERE immobilien.id = " . $id;
     if ($conn->query($deleter)){
         include("../layout/head.php");
         include("../layout/headerremoveproperty.php");
@@ -17,4 +18,4 @@
         echo "Error: ". $deleter ."". $conn->error;
         }
     $conn->close();
-    ?>
+?>

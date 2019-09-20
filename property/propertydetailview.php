@@ -1,11 +1,12 @@
 <article class="small">
 <h5>Adresse</h5>
 <?php
-    include("../sql/databaseconnaction.php");  
+    include("../sql/databaseconnaction.php");
+    include("../sql/urlsplit.php");  
     $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`, `immobilien`.`lat`, `immobilien`.`lng`
             FROM `immobilien` 
             LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
-            WHERE immobilien.id =" . intval($_GET['id']);
+            WHERE immobilien.id =" . $id;
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     echo "
