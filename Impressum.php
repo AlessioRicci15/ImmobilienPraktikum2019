@@ -3,7 +3,7 @@
 ?>
 <body>
     <header>
-        <h1>Impressum</h1>
+        <h1><img src="/img/logoimmo.png" alt="Logo" height="75"> Impressum</h1>
     </header>
     <nav>
         <dl>

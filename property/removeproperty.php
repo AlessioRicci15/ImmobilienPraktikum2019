@@ -1,6 +1,6 @@
 <?php
     include("../sql/databaseconnaction.php");
-    include("../sql/urlsplit.php");
+    include("../sql/root.php");
     $sql = "SELECT *
             FROM `immobilien` 
             WHERE immobilien.id =" . $id;

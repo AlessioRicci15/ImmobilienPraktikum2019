@@ -3,7 +3,7 @@
 ?>
 <body>
     <header>
-        <h1>Immobilie bearbeiten</h1>
+        <h1><img src="/img/logoimmo.png" alt="Logo" height="75"> Immobilie bearbeiten</h1>
     </header>
     <?php
         include("../layout/nav.php");

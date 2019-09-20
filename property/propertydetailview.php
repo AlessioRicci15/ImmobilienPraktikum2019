@@ -2,7 +2,7 @@
 <h5>Adresse</h5>
 <?php
     include("../sql/databaseconnaction.php");
-    include("../sql/urlsplit.php");  
+    include("../sql/root.php");  
     $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`, `immobilien`.`lat`, `immobilien`.`lng`
             FROM `immobilien` 
             LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`

@@ -1,6 +1,6 @@
 <?php
     include("../sql/databaseconnaction.php");
-    include("../sql/urlsplit.php");
+    include("../sql/root.php");
     include("../sql/getformularvariable.php");
     $lander = "SELECT `land`.`LandID`
                 FROM `land` 
