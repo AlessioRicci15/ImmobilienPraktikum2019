@@ -7,17 +7,17 @@
     </header>
     <nav>
         <dl>
-        <a href="index.php">
+        <a href="index">
             <li class="active">
                 <h3>Home</h3>
             </li>
         </a>
-        <a href="propertycontainer.php">
+        <a href="propertycontainer">
             <li>
                 <h3>Immobilien</h3>
             </li>
         </a>
-        <a href="impressum.php">
+        <a href="impressum">
             <li>
                 <h3>Impressum</h3>
             </li>

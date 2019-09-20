@@ -7,17 +7,17 @@
     </header>
     <nav>
         <dl>
-            <a href="index.php">
+            <a href="index">
                 <li>
                     <h3>Home</h3>
                 </li>
             </a>
-            <a href="propertycontainer.php">
+            <a href="propertycontainer">
                 <li class="active">
                     <h3>Immobilien</h3>
                 </li>
             </a>
-            <a href="impressum.php">
+            <a href="impressum">
                 <li>
                     <h3>Impressum</h3>
                 </li>
@@ -26,7 +26,7 @@
     </nav>
     <main>
         <article>
-            <h4>Immobilien<a href="property/creatpropertycontainer.php"><button type="button">Erfasse eine Immobilie</button></a></h4>
+            <h4>Immobilien<a href="property/creatpropertycontainer"><button type="button">Erfasse eine Immobilie</button></a></h4>
             <?php
                 include("property/propertytable.php");
             ?>            
