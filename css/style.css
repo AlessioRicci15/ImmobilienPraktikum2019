@@ -35,7 +35,7 @@ nav li{
   text-align: center;
 }
 header, footer{
-  background-color: rgb(131, 228, 131, 0.808);
+  background-color: rgb(155, 233, 155);
 }
 table{
   width: 100%;
@@ -53,7 +53,7 @@ td{
   height: 20px;
 }
 main{
-  background-color: rgb(231, 185, 142, 0.808);
+  background-color: rgb(236, 201, 182);
   min-height: 100%;
   text-align: left;
 }
