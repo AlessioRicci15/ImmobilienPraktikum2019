@@ -45,7 +45,7 @@ class Property {
         return $this->$lng;
     }
     function creatProperty(){
-
+        // zu programmieren
     }
 }
 
