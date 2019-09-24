@@ -1,6 +1,6 @@
 <?php
-    include("../sql/databaseconnaction.php");
-    include("../sql/root.php");
+    include("sql/databaseconnaction.php");
+    include("sql/routen.php");
     $sql = "SELECT *
             FROM `immobilien` 
             WHERE immobilien.id =" . $id;
@@ -8,11 +8,7 @@
     $deleter = "DELETE FROM immobilien 
                 WHERE immobilien.id = " . $id;
     if ($conn->query($deleter)){
-        include("../layout/head.php");
-        include("../layout/headerremoveproperty.php");
-        include("../layout/nav.php");
-        include("../layout/mainremoveproperty.php");
-        include("../layout/footer.php");
+        include("layout/mainremoveproperty.php");
         }
         else{
         echo "Error: ". $deleter ."". $conn->error;

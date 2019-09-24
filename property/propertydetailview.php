@@ -1,8 +1,8 @@
 <article class="small">
 <h5>Adresse</h5>
 <?php
-    include("../sql/databaseconnaction.php");
-    include("../sql/root.php");  
+    include("sql/databaseconnaction.php");
+    include("sql/routen.php");  
     $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`, `immobilien`.`lat`, `immobilien`.`lng`
             FROM `immobilien` 
             LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
@@ -16,8 +16,9 @@
       CHF {$row['Preis']}
     <h5>Weiteres</h5>
       Baujahr: {$row['Baujahr']}<br>
-      GoogleMaps:<br><br>
 "?>
+<?php if($row['lat']==''){}else{
+  echo("GoogleMaps:<br><br>");?>
 <div id="map" style="height: 350px;width: 75%;"></div>
     <script>
       var map;
@@ -34,4 +35,5 @@
     <script 
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAawYYD1cvdyZxm1ulFlvwwUuKgnA-G7A4&callback=initMap" async defer>
     </script>
+  <?php } ?>
 </article>

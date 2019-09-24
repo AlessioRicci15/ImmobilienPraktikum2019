@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
         echo "
         <tr>
             <td class=p1>
-                <a href='../property/propertydetailcontainer/{$row['id']}'>
+                <a href='properties/show/{$row['id']}'>
                     {$row['Ort']}
                 </a>
             </td>
@@ -32,13 +32,13 @@ if ($result->num_rows > 0) {
             {$row['Preis']}
         </td>
         <td class=p5 class=lang>
-            <a href=../property/propertydetailcontainer/{$row['id']}> 
+            <a href=properties/show/{$row['id']}> 
                 <i class='fa fa-eye'></i> Show<br>
             </a>
-            <a href=../property/editpropertycontainer/{$row['id']}> 
+            <a href=properties/edit/{$row['id']}> 
                 <i class='fa fa-edit'></i> Edit<br>
             </a>
-            <a href=../property/removeproperty/{$row['id']}> 
+            <a href=properties/remove/{$row['id']}> 
                 <i class='fa fa-trash'></i> Remove
             </a>
         </td>

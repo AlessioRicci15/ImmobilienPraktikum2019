@@ -1,35 +1,116 @@
 <?php
+    $url = $_SERVER['REQUEST_URI']; 
+    $url_parts = explode('/', $url);
+
+    $view = $url_parts[1]; 
+    $function = array_key_exists('2', $url_parts) ? $url_parts[2] : '';
+    $id = array_key_exists('3', $url_parts) ? intval($url_parts[3]) : -1; 
+
+    switch ($view):
+        case 'impressum':
+            $pageTitle = 'Impressum';
+            $navigation = 'impressum';
+            $view = 'impressum.php';
+            break;
+        case '':
+            $pageTitle = 'Home';
+            $navigation = 'home';
+            $view = 'home.php';
+            break;
+        case 'home':
+            $pageTitle = 'Home';
+            $navigation = 'home';
+            $view = 'home.php';
+            break;
+        case 'index':
+            $pageTitle = 'Home';
+            $navigation = 'home';
+            $view = 'home.php';
+            break;
+        case 'immobilien':
+            $pageTitle = 'Properties';
+            $navigation = 'properties';
+            $view = 'properties.php';
+            break;
+        case 'properties':
+            switch ($function) {
+                case '':
+                    $pageTitle = 'Properties';
+                    $navigation = 'properties';
+                    $view = 'properties.php';
+                    break;
+                case 'show':
+                    $pageTitle = 'Property';
+                    $navigation = '';
+                    $view = 'property/show.php';
+                    break;
+                case 'edit':
+                    $pageTitle = 'Edit property';
+                    $navigation = '';
+                    $view = 'property/edit.php';
+                    break;
+                case 'sendeditpropertyformular':
+                    $pageTitle = 'Property changed';
+                    $navigation = '';
+                    $view = 'property/sendeditpropertyformular.php';
+                    break;
+                case 'remove':
+                    $pageTitle = 'Remove property';
+                    $navigation = '';
+                    $view = 'property/remove.php';
+                    break;
+                case 'creat':
+                    $pageTitle = 'Creat property';
+                    $navigation = '';
+                    $view = 'property/creat.php';
+                    break;
+                case 'sendcreatpropertyformular':
+                    $pageTitle = 'Property created';
+                    $navigation = '';
+                    $view = 'property/sendcreatpropertyformular.php';
+                    break;
+                default:
+                    $pageTitle = '404';
+                    $navigation = '';
+                    $view = '404.php';
+                    break;
+            };
+            break;
+        default:
+            $pageTitle = '404';
+            $navigation = '';
+            $view = '404.php';
+            break;
+    endswitch;        
+
     include("layout/head.php");
 ?>
 <body>
     <header>
-        <h1><img src="/img/logoimmo.png" alt="Logo" height="75"> Home</h1>
+        <img src="/img/logoimmo.png" alt="Logo" height="75" class="logo">   
+        <h1><?php echo $pageTitle; ?></h1>
     </header>
     <nav>
         <dl>
-        <a href="index">
-            <li class="active">
+        <a href="/home">
+            <li <?php if($navigation == 'home'){?>class="active"<?php } ?>>
                 <h3>Home</h3>
             </li>
         </a>
-        <a href="propertycontainer">
-            <li>
+        <a href="/properties">
+            <li <?php if($navigation == 'properties'){?>class="active"<?php } ?>>
                 <h3>Immobilien</h3>
             </li>
         </a>
-        <a href="impressum">
-            <li>
+        <a href="/impressum">
+            <li <?php if($navigation == 'impressum'){?>class="active"<?php } ?>>
                 <h3>Impressum</h3>
             </li>
         </a>
         </dl>
     </nav>
     <main>
-        <article>
-            <h4>Wilkommen</h4>
-            Dies ist mein Projekt für das Kurzzeitpraktikum bei Fronify.<br>
-            Hier verbringe ich vier Wochen im Herbs um einen Einblick in das Berufsleben zu erhalten.
-        </article>
+        <?php include($view);?>
     </main>
     <?php
         include("layout/footer.php");

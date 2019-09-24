@@ -1,6 +1,6 @@
 <?php
-    include("../sql/databaseconnaction.php");
-    include("../sql/root.php");
+    include("sql/databaseconnaction.php");
+    include("sql/routen.php");
     $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`, `immobilien`.`lat`, `immobilien`.`lng`
             FROM `immobilien` 
             LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
@@ -21,7 +21,7 @@
     <br>
 
     <?php
-        include("../sql/databaseconnaction.php");
+        include("sql/databaseconnaction.php");
         $sql = "SELECT `land`.`LandID`, `land`.`Landname`
                 FROM `land`
                 ORDER BY Landname ASC";
