@@ -1,5 +1,4 @@
 <?php
-    include("sql/databaseconnaction.php");
     include("sql/routen.php");
     include("sql/getformularvariable.php");
     $lander = "SELECT `land`.`LandID`

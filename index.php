@@ -1,6 +1,8 @@
 <?php
 
     include("layout/head.php");
+    include("sql/databaseconnaction.php");
+
 
     $url = $_SERVER['REQUEST_URI']; 
     $url_parts = explode('/', $url);

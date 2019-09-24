@@ -1,8 +1,7 @@
 <article class="small">
 <h5>Adresse</h5>
 <?php
-    include("sql/databaseconnaction.php");
-    include("sql/routen.php");  
+    include("sql/routen.php");
     $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`, `immobilien`.`lat`, `immobilien`.`lng`
             FROM `immobilien` 
             LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
