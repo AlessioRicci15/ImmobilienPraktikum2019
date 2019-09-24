@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 23. Sep 2019 um 11:26
+-- Erstellungszeit: 24. Sep 2019 um 15:11
 -- Server-Version: 10.4.6-MariaDB
 -- PHP-Version: 7.3.9
 
@@ -112,6 +112,16 @@ ALTER TABLE `immobilien`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `Ort` (`Ort`),
   ADD KEY `FK_immobilien_land` (`Land`);
+
+--
+-- AUTO_INCREMENT für exportierte Tabellen
+--
+
+--
+-- AUTO_INCREMENT für Tabelle `immobilien`
+--
+ALTER TABLE `immobilien`
+  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- Constraints der exportierten Tabellen
