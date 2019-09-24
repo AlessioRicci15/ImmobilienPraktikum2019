@@ -1,5 +1,4 @@
 <?php
-    include("sql/databaseconnaction.php");
     include("sql/routen.php");
     $sql = "SELECT *
             FROM `immobilien` 

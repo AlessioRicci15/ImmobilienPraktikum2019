@@ -1,10 +1,13 @@
 <?php
-    include("sql/databaseconnaction.php"); 
-    $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`
-            FROM `immobilien`
-            LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
+
+include("model/Property.php");
+
+$results = Property::getAll();
+$resultsCount = count($results);
+
+
+
+if ($resultsCount > 0) {
     echo "
     <table border=1>
         <tr>
@@ -14,31 +17,31 @@ if ($result->num_rows > 0) {
             <th class=p4>Preis</th>
             <th class=p5>Aktion</th>
         </tr>";
-    while($row = $result->fetch_assoc()) {
+    foreach ($results as $property) {
         echo "
         <tr>
             <td class=p1>
-                <a href='properties/show/{$row['id']}'>
-                    {$row['Ort']}
+                <a href='properties/show/{$property->getId()}'>
+                    {$property->getAdresse()}
                 </a>
             </td>
         <td class=p2 class=lang>
-            {$row['Landname']}
+            {$property->getLand()}
         </td>
         <td class=p3 class=lang>
-            {$row['Baujahr']}
+            {$property->getBaujahr()}
         </td>
         <td class=p4 class=lang>
-            {$row['Preis']}
+            {$property->getPreis()}
         </td>
         <td class=p5 class=lang>
-            <a href=properties/show/{$row['id']}> 
+            <a href=properties/show/{$property->getId()}>
                 <i class='fa fa-eye'></i> Show<br>
             </a>
-            <a href=properties/edit/{$row['id']}> 
+            <a href=properties/edit/{$property->getId()}>
                 <i class='fa fa-edit'></i> Edit<br>
             </a>
-            <a href=properties/remove/{$row['id']}> 
+            <a href=properties/remove/{$property->getId()}>
                 <i class='fa fa-trash'></i> Remove
             </a>
         </td>
@@ -48,5 +51,4 @@ if ($result->num_rows > 0) {
     } else {
         echo "0 results";
     }
-    $conn->close();
 ?>
