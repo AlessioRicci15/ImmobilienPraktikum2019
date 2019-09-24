@@ -1,4 +1,7 @@
 <?php
+
+    include("layout/head.php");
+
     $url = $_SERVER['REQUEST_URI']; 
     $url_parts = explode('/', $url);
 
@@ -82,12 +85,12 @@
             $view = '404.php';
             break;
     endswitch;        
-
-    include("layout/head.php");
 ?>
 <body>
     <header>
-        <img src="/img/logo.png" alt="Logo" class="logo">   
+        <a href="/">
+            <img src="/img/logo.png" alt="Logo" class="logo">
+        </a>   
         <h1 style="margin-top: 34.8;"><?php echo $pageTitle; ?></h1>
     </header>
     <nav>

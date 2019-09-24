@@ -49,10 +49,10 @@ class Property {
     }
 }
 
-$property->getAdresse();
-$property->getLand();
-$property->getPreis();
-$property->getBaujahr();
-$property->getLat();
-$property->getLng();
+//            $property->getAdresse();
+//            $property->getLand();
+//            $property->getPreis();
+//            $property->getBaujahr();
+//            $property->getLat();
+//            $property->getLng();
 ?>
