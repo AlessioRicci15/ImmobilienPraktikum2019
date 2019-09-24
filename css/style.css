@@ -4,6 +4,9 @@ header, footer, nav, main, html {
 header, footer, nav{
   border: 1px solid black;
 }
+header{
+  height: 108px;
+}
 .logo{
   position: absolute;
   left: 4;

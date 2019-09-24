@@ -87,8 +87,8 @@
 ?>
 <body>
     <header>
-        <img src="/img/logoimmo.png" alt="Logo" height="75" class="logo">   
-        <h1><?php echo $pageTitle; ?></h1>
+        <img src="/img/logo.png" alt="Logo" height="100" class="logo">   
+        <h1 style="margin-top: 34.8;"><?php echo $pageTitle; ?></h1>
     </header>
     <nav>
         <dl>
