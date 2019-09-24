@@ -11,6 +11,7 @@ header{
   position: absolute;
   left: 4;
   top: 4;
+  height: 100px;
 }
 .knopf{
   background-color: white;
@@ -129,6 +130,12 @@ td, th{
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    .logo{
+      position: absolute;
+      left: 4;
+      top: 4;
+      height: 80px;
+    }
   }
   
   @media screen and (max-width: 600px) {
@@ -147,6 +154,12 @@ td, th{
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+    .logo{
+      position: absolute;
+      left: 4;
+      top: 4;
+      height: 60px;
     }
   }
 
@@ -186,5 +199,11 @@ td, th{
       color: black;
       width: 100%;
       text-align: center;
+    }
+    .logo{
+      position: absolute;
+      left: 4;
+      top: 4;
+      height: 40px;
     }
   }
