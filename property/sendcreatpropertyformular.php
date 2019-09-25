@@ -1,5 +1,4 @@
 <?php
-    include("model/Property.php");
     include("sql/getformularvariable.php");
     $property = new Property();
     $property->setAdresse($adresse);

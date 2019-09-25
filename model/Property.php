@@ -52,9 +52,9 @@
         }
         function createProperty($adress, $baujahr, $price, $land){
             global $conn;
-            $insert = "INSERT INTO immobilien (Ort, Baujahr, Preis, Land)
+            $isCreated = "INSERT INTO immobilien (Ort, Baujahr, Preis, Land)
                         values ('$adress','$baujahr','$price','$land')";
-            if ($conn->query($insert))
+            if ($conn->query($isCreated))
             {
                 $conn->close();
                 return true;
@@ -66,11 +66,44 @@
         }
         function editProperty($adresse, $baujahr, $preis, $landid, $id){
             global $conn;
-            $changer = "UPDATE immobilien 
+            $isChanged = "UPDATE immobilien 
                         SET Ort='$adresse', Baujahr='$baujahr', Preis='$preis', Land=$landid
                         WHERE immobilien.id =" . $id;
-            if ($conn->query($changer))
+            if ($conn->query($isChanged))
             {
+                $conn->close();
+                return true;
+            } else
+            {
+                $conn->close();
+                return false;
+            }
+        }
+        function removeProperty($id){
+            global $conn;
+            $isDeleted = "DELETE FROM immobilien 
+                        WHERE immobilien.id = " . $id;
+            if ($conn->query($isDeleted))
+            {
+                $conn->close();
+                return true;
+            } else
+            {
+                $conn->close();
+                return false;
+            }
+        }
+        function getByID($id){
+            global $conn;
+            $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`, `immobilien`.`lat`, `immobilien`.`lng`
+            FROM `immobilien` 
+            LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
+            WHERE immobilien.id =" . $id;
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();
+            if ($conn->query($sql))
+            {
+                return $row;
                 $conn->close();
                 return true;
             } else

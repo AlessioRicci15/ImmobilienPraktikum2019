@@ -1,6 +1,7 @@
 <?php
     include("layout/head.php");
     include("sql/databaseconnaction.php");
+    include("model/Property.php");
     
     $url = $_SERVER['REQUEST_URI']; 
     $url_parts = explode('/', $url);

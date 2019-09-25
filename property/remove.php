@@ -1,16 +1,16 @@
 <?php
-    include("sql/routen.php");
     $sql = "SELECT *
             FROM `immobilien` 
             WHERE immobilien.id =" . $id;
     $result = $conn->query($sql);
-    $deleter = "DELETE FROM immobilien 
-                WHERE immobilien.id = " . $id;
-    if ($conn->query($deleter)){
+    $property = new Property();
+    $isDeleted = $property->removeProperty(
+        $id
+    );
+    if ($isDeleted){
         include("layout/mainremoveproperty.php");
         }
         else{
-        echo "Error: ". $deleter ."". $conn->error;
+        include("layout/mainremovefalse.php");
         }
-    $conn->close();
 ?>

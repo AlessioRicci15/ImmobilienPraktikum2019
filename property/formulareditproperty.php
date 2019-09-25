@@ -1,21 +1,13 @@
 <?php
-    include("sql/routen.php");
-    include("model/Property.php");
-    $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`, `immobilien`.`lat`, `immobilien`.`lng`
-            FROM `immobilien` 
-            LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
-            WHERE immobilien.id =" . $id;
-    $result = $conn->query($sql);
-    $row = $result->fetch_assoc();
-    $Baujahr = $row['Baujahr'];
-    $Preis = $row['Preis'];
-    $Ort = $row['Ort'];
-    $Land = $row['Landname'];
+    $property = new Property();
+    $property = $property->getByID(
+      $id
+    );  
 ?>
-<form method="post" action="../sendeditpropertyformular/<?php echo $row['id'] ?>">
+<form method="post" action="../sendeditpropertyformular/<?php echo $property['id'] ?>">
     Adresse:
     <br>
-        <input name="adresse" type="text"  value="<?php echo $Ort;?>" style="width: 50%; height:30px;">
+        <input name="adresse" type="text"  value="<?php echo"{$property['Ort']}"?>" style="width: 50%; height:30px;">
     <br>
     Land:
     <br>
@@ -34,13 +26,14 @@
         }
         echo '</select>';
     ?>
-    <br> 
+    
+        <br> 
     Baujahr:
     <br>
-        <input type="text" name="baujahr" value="<?php echo $Baujahr;?>"  style="width: 250px"><br>
+        <input type="text" name="baujahr" value="<?php echo "{$property['Baujahr']}"?>"  style="width: 250px"><br>
     Preis:
     <br>
-        <input type="text" name="preis"  value="<?php echo $Preis;?>"  style="width: 250px">
+        <input type="text" name="preis"  value="<?php echo "{$property['Preis']}"?>"  style="width: 250px">
     <br><br>
         <button type="submit">Speichern</button>
 </form>

@@ -43,7 +43,7 @@
                         $view = 'property/edit.php';
                         break;
                     case 'sendeditpropertyformular':
-                        $pageTitle = 'Property changed';
+                        $pageTitle = 'Property changing';
                         $navigation = '';
                         $view = 'property/sendeditpropertyformular.php';
                         break;
@@ -58,12 +58,12 @@
                         $view = 'property/creat.php';
                         break;
                     case 'sendcreatpropertyformular':
-                        $pageTitle = 'Property created';
+                        $pageTitle = 'Property creating';
                         $navigation = '';
                         $view = 'property/sendcreatpropertyformular.php';
                         break;
                     default:
-                        $pageTitle = '404';
+                        $pageTitle = 'ERROR 404';
                         $navigation = '';
                         $view = '404.php';
                         break;
