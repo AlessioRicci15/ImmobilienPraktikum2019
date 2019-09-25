@@ -19,7 +19,6 @@
     <br>
     Land:
     <br>
-
     <?php
         $sql = "SELECT `land`.`LandID`, `land`.`Landname`
                 FROM `land`
@@ -35,7 +34,6 @@
         }
         echo '</select>';
     ?>
-
     <br> 
     Baujahr:
     <br>

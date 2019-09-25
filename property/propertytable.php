@@ -1,12 +1,7 @@
 <?php
-
 include("model/Property.php");
-
 $results = Property::getAll();
 $resultsCount = count($results);
-
-
-
 if ($resultsCount > 0) {
     echo "
     <table border=1>
