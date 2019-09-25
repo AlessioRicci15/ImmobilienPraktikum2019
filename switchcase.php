@@ -55,7 +55,7 @@
                     case 'creat':
                         $pageTitle = 'Creat property';
                         $navigation = '';
-                        $view = 'property/creat.php';
+                        $view = 'property/create.php';
                         break;
                     case 'sendcreatpropertyformular':
                         $pageTitle = 'Property creating';

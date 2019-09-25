@@ -1,8 +1,4 @@
 <?php
-    $sql = "SELECT *
-            FROM `immobilien` 
-            WHERE immobilien.id =" . $id;
-    $result = $conn->query($sql);
     $property = new Property();
     $isDeleted = $property->removeProperty(
         $id

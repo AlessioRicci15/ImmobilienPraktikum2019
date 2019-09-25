@@ -1,8 +1,8 @@
 <?php
-    $servername = "127.0.0.1";
-    $username = "root";
-    $password = "yourpassword";
-    $dbname = "imobilien";
+    $servername = "localhost";
+    $username = "aless";
+    $password = "123456789";
+    $dbname = "immobilien";
     $conn = new mysqli($servername, $username, $password, $dbname);
     $conn->set_charset('utf8');
     if ($conn->connect_error) {

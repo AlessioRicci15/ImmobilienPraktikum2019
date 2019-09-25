@@ -1,11 +1,9 @@
 <?php
-    $sql = "SELECT `land`.`LandID`, `land`.`Landname`
-            FROM `land`
-            ORDER BY Landname ASC";
-    $result = $conn->query($sql);
+    $country = new Country();
+    $country = $country->orderedCountries();
     echo '<select name="land">';
-    while ($row = $result->fetch_assoc()){
-        echo '<option value="'.$row['LandID'].'">'.$row['Landname'].'</option>';
+    foreach ($country as $countries){
+        echo "<option value={$countries['Landname']}> </option>";
     }
-    echo '</select>'
+    echo "</select>"
 ?>

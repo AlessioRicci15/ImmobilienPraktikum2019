@@ -1,0 +1,51 @@
+nav{
+    text-align: center;
+    border: 1px solid black;
+    height: 75px;
+    width: 99.9%;
+    background-color: rgb(180, 247, 171);
+}
+nav a {
+    display: block;
+}
+nav li {
+    list-style-type: none;
+    color: black;
+    width: 33.33%;
+    text-align: center;
+}
+nav dl {
+    margin-top: 10px;
+}
+nav li:hover {
+    background-color: rgb(68, 216, 68);
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    nav li {
+        display: block;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav a {
+        display: block;
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+    nav {
+        height: 200px;
+        width: 100%;
+        background-color: rgb(180, 247, 171);
+        text-align: center;
+    }
+    nav li {
+        list-style-type: none;
+        color: black;
+        width: 100%;
+        text-align: center;
+    }
+}

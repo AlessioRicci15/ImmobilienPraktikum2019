@@ -1,22 +1,26 @@
 <?php
-// First of all send css header
 header("Content-type: text/css");
 
-// Array of css files
 $css = array(
-    'style.css',
-    'header.css'
+    'article.css',
+    'body.css',
+    'button.css',
+    'class.css',
+    'footer.css',
+    'header.css',
+    'html.css',
+    'liste.css',
+    'main.css',
+    'nav.css',
+    'table.css',
+    'text.css'
 );
 
-// Prevent a notice
 $css_content = '';
 
-// Loop the css Array
 foreach ($css as $css_file) {
-    // Load the content of the css file
     $css_content .= file_get_contents($css_file);
 }
 
-// print the css content
 echo $css_content;
 ?>
