@@ -1,4 +1,18 @@
 <?php 
+
+$url = $_SERVER['REQUEST_URI']; 
+$url_parts = explode('/', $url);
+
+$view = $url_parts[1]; 
+$function = array_key_exists('2', $url_parts) ? $url_parts[2] : '';
+$id = array_key_exists('3', $url_parts) ? intval($url_parts[3]) : -1;
+
+if ($view === 'api') {
+    $resource = $function;
+    include('api/api.php');
+    exit;
+}
+
     switch ($view):
             case 'impressum':
                 $pageTitle = 'Impressum';
@@ -52,8 +66,8 @@
                         $navigation = '';
                         $view = 'property/remove.php';
                         break;
-                    case 'creat':
-                        $pageTitle = 'Creat property';
+                    case 'create':
+                        $pageTitle = 'Create property';
                         $navigation = '';
                         $view = 'property/create.php';
                         break;

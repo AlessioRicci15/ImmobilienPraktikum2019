@@ -1,17 +1,9 @@
 <?php
+    include("router.php");   
     include("layout/head.php");
     include("sql/databaseconnaction.php");
     include("model/Property.php");
     include("model/Country.php");
-    
-    $url = $_SERVER['REQUEST_URI']; 
-    $url_parts = explode('/', $url);
-
-    $view = $url_parts[1]; 
-    $function = array_key_exists('2', $url_parts) ? $url_parts[2] : '';
-    $id = array_key_exists('3', $url_parts) ? intval($url_parts[3]) : -1; 
-
-    include("switchcase.php");        
 ?>
 <body>
     <header>

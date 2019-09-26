@@ -12,16 +12,15 @@
     Land:
     <br>
     <?php
-        $sql = "SELECT `land`.`LandID`, `land`.`Landname`
-                FROM `land`
-                ORDER BY Landname ASC";
-        $result = $conn->query($sql);
+        $country = new Country();
+        $countries = $country->orderedCountries();
         echo '<select name="land">';
-        while ($row = $result->fetch_assoc()){
-            if($Land==$row['Landname']){
-                echo '<option selected value="'.$row['Landname'].'">'.$row['Landname'].'</option>';
+        foreach ($countries as $country){
+            var_dump($property['LandID']);var_dump($country['LandID']);
+            if($property['LandID'] == $country['LandID']){
+                echo "<option selected value={$country['LandID']}>{$country['Landname']}</option>";
             }else{
-                echo '<option value="'.$row['Landname'].'">'.$row['Landname'].'</option>';
+                echo "<option value={$country['LandID']}>{$country['Landname']}</option>";
             } 
         }
         echo '</select>';

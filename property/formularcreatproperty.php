@@ -14,7 +14,7 @@
         <input type="text" name="baujahr" placeholder="2019" style="width: 250px"><br>
     Preis:
     <br>
-        <input type="text" name="preis"  placeholder="1000000" style="width: 250px">
+        <input type="text" name="preis"  maxlength="12" placeholder="1000000" style="width: 250px">
     <br><br>
         <input type="submit" value='Absenden' style="width: 250px">   
         <input type="reset" value='Zurücksetzten' style="width: 250px" >

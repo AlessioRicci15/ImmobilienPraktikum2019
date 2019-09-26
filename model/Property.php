@@ -54,6 +54,7 @@
             global $conn;
             $isCreated = "INSERT INTO immobilien (Ort, Baujahr, Preis, Land)
                         values ('$adress','$baujahr','$price','$land')";
+
             if ($conn->query($isCreated))
             {
                 $conn->close();
@@ -67,8 +68,11 @@
         function editProperty($adresse, $baujahr, $preis, $landid, $id){
             global $conn;
             $isChanged = "UPDATE immobilien 
-                        SET Ort='$adresse', Baujahr='$baujahr', Preis='$preis', Land=$landid
-                        WHERE immobilien.id =" . $id;
+                          SET Ort='$adresse', 
+                              Baujahr='$baujahr', 
+                              Preis='$preis', 
+                              Land=$landid
+                          WHERE immobilien.id =" . $id;
             if ($conn->query($isChanged))
             {
                 $conn->close();
@@ -82,7 +86,7 @@
         function removeProperty($id){
             global $conn;
             $isDeleted = "DELETE FROM immobilien 
-                        WHERE immobilien.id = " . $id;
+                          WHERE immobilien.id = " . $id;
             if ($conn->query($isDeleted))
             {
                 $conn->close();
@@ -95,10 +99,17 @@
         }
         function getByID($id){
             global $conn;
-            $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`, `immobilien`.`lat`, `immobilien`.`lng`
-            FROM `immobilien` 
-            LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
-            WHERE immobilien.id =" . $id;
+            $sql = "SELECT `immobilien`.`id`, 
+                           `immobilien`.`Ort`, 
+                           `immobilien`.`Preis`, 
+                           `immobilien`.`Baujahr`, 
+                           `land`.`LandID`, 
+                           `land`.`Landname`, 
+                           `immobilien`.`lat`, 
+                           `immobilien`.`lng`
+                    FROM `immobilien` 
+                    LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
+                    WHERE immobilien.id =" . $id;
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
             if ($conn->query($sql))
@@ -114,9 +125,13 @@
         }
         public static function getAll(){
             global $conn;
-            $sql = "SELECT `immobilien`.`id`, `immobilien`.`Ort`, `immobilien`.`Preis`, `immobilien`.`Baujahr`, `land`.`Landname`
-                FROM `immobilien`
-                LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`";
+            $sql = "SELECT `immobilien`.`id`, 
+                           `immobilien`.`Ort`, 
+                           `immobilien`.`Preis`, 
+                           `immobilien`.`Baujahr`, 
+                           `land`.`Landname`
+                    FROM `immobilien`
+                    LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`";
             $result = $conn->query($sql);
             $results = [];
             while ($row = $result->fetch_assoc())

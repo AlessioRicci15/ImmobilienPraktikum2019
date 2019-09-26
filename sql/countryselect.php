@@ -1,9 +1,9 @@
 <?php
     $country = new Country();
-    $country = $country->orderedCountries();
+    $countries = $country->orderedCountries();
     echo '<select name="land">';
-    foreach ($country as $countries){
-        echo "<option value={$countries['Landname']}> </option>";
+    foreach ($countries as $country){
+        echo "<option value={$country['LandID']}>{$country['Landname']}</option>";
     }
     echo "</select>"
 ?>

@@ -1,10 +1,8 @@
 main{
-    /*text-align: center;*/
     background-color: rgb(236, 201, 182);
     min-height: 100%;
     text-align: left;
 }
-
 main a:hover {
     text-decoration-line: underline;
 }

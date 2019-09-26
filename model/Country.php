@@ -18,21 +18,19 @@
         }
         function orderedCountries(){
             global $conn;
-            $landesliste = "SELECT `land`.`LandID`, `land`.`Landname`
+            $landesliste = "SELECT `land`.`LandID`, 
+                                   `land`.`Landname`
                             FROM `land`
                             ORDER BY Landname ASC";
+
             $result = $conn->query($landesliste);
-            $row = $result->fetch_assoc();
-            if ($conn->query($landesliste))
-            {
-                return $row;
-                $conn->close();
-                return true;
-            } else
-            {
-                $conn->close();
-                return false;
+            $countries = [];
+
+            while ($row = $result->fetch_assoc()) {
+                array_push($countries, $row);
             }
+
+            return $countries;
         }
     }
 ?>
