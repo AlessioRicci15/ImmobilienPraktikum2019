@@ -4,8 +4,8 @@ header('Content-Type: application/json');
 
 $propertyInstance = new Property();
 
-$property = $propertyInstance->getByID($id);
+$properties = $propertyInstance->getAll();
 
-echo json_encode($property);
+echo json_encode($properties,true);
 
 ?>

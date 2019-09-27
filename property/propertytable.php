@@ -15,27 +15,27 @@ if ($resultsCount > 0) {
         echo "
         <tr>
             <td class=p1>
-                <a href='properties/show/{$property->getId()}'>
-                    {$property->getAdresse()}
+                <a href='properties/show/{$property['id']}'>
+                    {$property['Ort']}
                 </a>
             </td>
         <td class=p2 class=lang>
-            {$property->getLand()}
+            {$property['Landname']}
         </td>
         <td class=p3 class=lang>
-            {$property->getBaujahr()}
+            {$property['Baujahr']}
         </td>
         <td class=p4 class=lang>
-            {$property->getPreis()}
+            {$property['Preis']}
         </td>
         <td class=p5 class=lang>
-            <a href=properties/show/{$property->getId()}>
+            <a href=properties/show/{$property['id']}>
                 <i class='fa fa-eye'></i> Show<br>
             </a>
-            <a href=properties/edit/{$property->getId()}>
+            <a href=properties/edit/{$property['id']}>
                 <i class='fa fa-edit'></i> Edit<br>
             </a>
-            <a href=properties/remove/{$property->getId()}>
+            <a href=properties/remove/{$property['id']}>
                 <i class='fa fa-trash'></i> Remove
             </a>
         </td>

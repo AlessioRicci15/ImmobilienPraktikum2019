@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 $propertyInstance = new Property();
 
-$property = $propertyInstance->getByID($id);
+$property = $propertyInstance->editProperty($adresse, $baujahr, $preis, $landid, $id);
 
 echo json_encode($property);
 

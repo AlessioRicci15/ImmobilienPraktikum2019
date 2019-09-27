@@ -136,13 +136,7 @@
             $results = [];
             while ($row = $result->fetch_assoc())
             {
-                $object = new Property();
-                $object->setAdresse($row['Ort']);
-                $object->setBaujahr($row['Baujahr']);
-                $object->setPreis($row['Preis']);
-                $object->setLand($row['Landname']);
-                $object->setId($row['id']);
-                array_push($results, $object);
+                array_push($results, $row);
             }
             $conn->close();
             return $results;
