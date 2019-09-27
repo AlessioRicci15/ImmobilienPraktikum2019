@@ -114,13 +114,26 @@
             $row = $result->fetch_assoc();
             if ($conn->query($sql))
             {
-                return $row;
                 $conn->close();
-                return true;
+                return $row;
             } else
             {
                 $conn->close();
                 return false;
+            }
+        }
+        function adressAlreadyExist($adresse){
+            global $conn;
+            $adress = "SELECT `immobilien`.`Ort`
+                       FROM `immobilien`
+                       WHERE `immobilien`.`Ort` = '$adresse'";
+            $result = $conn->query($adress);
+            $row = $result->fetch_assoc();
+
+            if ($row === null){
+                return false;
+            } else {
+                return true;
             }
         }
         public static function getAll(){
