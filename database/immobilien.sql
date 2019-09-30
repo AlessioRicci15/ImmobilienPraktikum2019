@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 24. Sep 2019 um 15:11
+-- Erstellungszeit: 30. Sep 2019 um 08:07
 -- Server-Version: 10.4.6-MariaDB
 -- PHP-Version: 7.3.9
 
@@ -32,7 +32,7 @@ CREATE TABLE `immobilien` (
   `id` int(32) NOT NULL,
   `Land` int(32) NOT NULL,
   `Ort` varchar(512) NOT NULL,
-  `Preis` int(64) NOT NULL,
+  `Preis` bigint(64) UNSIGNED NOT NULL,
   `Baujahr` int(32) NOT NULL,
   `lat` double DEFAULT NULL,
   `lng` double DEFAULT NULL
@@ -48,7 +48,7 @@ INSERT INTO `immobilien` (`id`, `Land`, `Ort`, `Preis`, `Baujahr`, `lat`, `lng`)
 (3, 5, '97 Brower Ave Rockville Center, New York 11570', 1200000, 2019, 40.66151, -73.632683),
 (4, 5, '1321 E LAKESHORE DR Coeur dAlene, Idaho 83814', 7995000, 1922, 47.666545, -116.766582),
 (5, 5, '216 ParkWood Pl Post Falls, Idaho 83854', 8495000, 1995, 47.703331, -116.926086),
-(6, 5, '1089 Hwy 71 S Ashdown, Arkansas 71822', 1250000, 1997, 33.59465, -94.059158),
+(6, 5, '1089 Hwy 71 S Ashdown, Arkansas 71822 ', 1250000, 1997, 33.595346, -94.059017),
 (7, 5, '7566 E GEM SHORES RD Hayden, Idaho 83835', 4195000, 2010, 47.78368, -116.686523),
 (8, 5, '19710 Holly Court Magnolia, Texas 77355', 585000, 1997, 30.174749, -95.763367),
 (9, 5, '5137 E STATE HWY 107 Edinburg, Texas 78542', 969900, 2004, 26.294161, -98.109818),
@@ -101,6 +101,53 @@ INSERT INTO `immobilien` (`id`, `Land`, `Ort`, `Preis`, `Baujahr`, `lat`, `lng`)
 (56, 5, '1728 Union Hill Road, Ennis, Texa 75119', 1250000, 2006, 32.3321, -96.6224),
 (57, 5, '709 EASTLAWN DR CELEBRATION, Florida 34747', 2475000, 2002, 28.3130363, -81.5459143);
 
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `land`
+--
+
+CREATE TABLE `land` (
+  `LandID` int(32) NOT NULL,
+  `Landname` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `land`
+--
+
+INSERT INTO `land` (`LandID`, `Landname`) VALUES
+(10, 'Argentinien'),
+(19, 'Australien'),
+(25, 'Bermuda'),
+(22, 'Brasilien'),
+(9, 'Canada'),
+(18, 'China'),
+(24, 'Dänemark'),
+(1, 'Deutschland'),
+(26, 'Europa'),
+(4, 'Frankreich'),
+(16, 'Griechenland'),
+(21, 'Indien'),
+(7, 'Irland'),
+(2, 'Italien'),
+(17, 'Japan'),
+(29, 'Kaiman Inseln'),
+(11, 'Korea'),
+(8, 'Luxenburg'),
+(20, 'Mexico'),
+(23, 'New Zeland'),
+(27, 'Niederland'),
+(13, 'Portugal'),
+(15, 'Russland'),
+(30, 'Schweden'),
+(3, 'Schweiz'),
+(28, 'Singapu'),
+(14, 'Spanien'),
+(12, 'Türkei'),
+(6, 'UK'),
+(5, 'USA');
+
 --
 -- Indizes der exportierten Tabellen
 --
@@ -114,6 +161,13 @@ ALTER TABLE `immobilien`
   ADD KEY `FK_immobilien_land` (`Land`);
 
 --
+-- Indizes für die Tabelle `land`
+--
+ALTER TABLE `land`
+  ADD PRIMARY KEY (`LandID`),
+  ADD UNIQUE KEY `Landname` (`Landname`);
+
+--
 -- AUTO_INCREMENT für exportierte Tabellen
 --
 
@@ -121,7 +175,7 @@ ALTER TABLE `immobilien`
 -- AUTO_INCREMENT für Tabelle `immobilien`
 --
 ALTER TABLE `immobilien`
-  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=391;
 
 --
 -- Constraints der exportierten Tabellen

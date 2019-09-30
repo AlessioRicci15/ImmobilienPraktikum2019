@@ -16,7 +16,6 @@
         $countries = $country->orderedCountries();
         echo '<select name="land">';
         foreach ($countries as $country){
-            var_dump($property['LandID']);var_dump($country['LandID']);
             if($property['LandID'] == $country['LandID']){
                 echo "<option selected value={$country['LandID']}>{$country['Landname']}</option>";
             }else{

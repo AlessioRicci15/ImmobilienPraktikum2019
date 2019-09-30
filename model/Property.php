@@ -114,11 +114,9 @@
             $row = $result->fetch_assoc();
             if ($conn->query($sql))
             {
-                $conn->close();
                 return $row;
             } else
             {
-                $conn->close();
                 return false;
             }
         }

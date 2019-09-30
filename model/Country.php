@@ -16,14 +16,15 @@
         function getLandname(){
             return $this->Landname;
         }
-        function orderedCountries(){
+        public function orderedCountries(){
             global $conn;
             $landesliste = "SELECT `land`.`LandID`, 
                                    `land`.`Landname`
                             FROM `land`
-                            ORDER BY Landname ASC";
+                            ORDER BY `Landname` ASC";
 
             $result = $conn->query($landesliste);
+
             $countries = [];
 
             while ($row = $result->fetch_assoc()) {

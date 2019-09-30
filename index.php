@@ -1,9 +1,9 @@
 <?php
     include("sql/databaseconnaction.php");
-    include("model/Property.php");
-    include("router.php");   
-    include("layout/head.php");
     include("model/Country.php");
+    include("model/Property.php");
+    include("layout/head.php");
+    include("router.php");      
 ?>
 <body>
     <?php
