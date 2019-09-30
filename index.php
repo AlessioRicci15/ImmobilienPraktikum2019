@@ -2,8 +2,8 @@
     include("sql/databaseconnaction.php");
     include("model/Country.php");
     include("model/Property.php");
-    include("layout/head.php");
-    include("router.php");      
+    include("router.php");  
+    include("layout/head.php");    
 ?>
 <body>
     <?php

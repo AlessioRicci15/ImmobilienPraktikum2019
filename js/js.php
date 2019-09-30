@@ -2,7 +2,8 @@
 header("Content-type: text/javascript");
 
 $js = array(
-    'helloworld.js'
+    'helloworld.js',
+    'propertiestable.js'
 );
 
 $js_content = '';

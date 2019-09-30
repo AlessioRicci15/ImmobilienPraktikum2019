@@ -1,7 +1,23 @@
 <?php
-$results = Property::getAll();
-$resultsCount = count($results);
-if ($resultsCount > 0) {
+//clientside
+echo '
+<table border="1" id="allPropertiesTable">
+    <thead>
+    <tr>
+        <th class=p1>Adresse</th>
+        <th class=p2>Land</th>
+        <th class=p3>Baujahr</th>
+        <th class=p4>Preis</th>
+        <th class=p5>Aktion</th>
+    </tr>
+    </thead>
+</table>';
+
+/*
+//serverside 
+    $results = Property::getAll();
+    $resultsCount = count($results);
+    if ($resultsCount > 0) {
     echo "
     <table border=1>
         <tr>
@@ -45,4 +61,5 @@ if ($resultsCount > 0) {
     } else {
         echo "0 results";
     }
-?>
+*/
+    ?>
