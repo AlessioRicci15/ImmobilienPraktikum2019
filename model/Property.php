@@ -57,11 +57,9 @@
 
             if ($conn->query($isCreated))
             {
-                $conn->close();
                 return true;
             } else
             {
-                $conn->close();
                 return false;
             }
         }
@@ -75,11 +73,9 @@
                           WHERE immobilien.id =" . $id;
             if ($conn->query($isChanged))
             {
-                $conn->close();
                 return true;
             } else
             {
-                $conn->close();
                 return false;
             }
         }
@@ -89,11 +85,9 @@
                           WHERE immobilien.id = " . $id;
             if ($conn->query($isDeleted))
             {
-                $conn->close();
                 return true;
             } else
             {
-                $conn->close();
                 return false;
             }
         }
@@ -149,7 +143,6 @@
             {
                 array_push($results, $row);
             }
-            $conn->close();
             return $results;
         }
     }

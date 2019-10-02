@@ -1,6 +1,6 @@
-<?php
-//clientside
-echo '
+<div class="property_table"></div>
+
+
 <table border="1" id="allPropertiesTable">
     <thead>
     <tr>
@@ -11,8 +11,10 @@ echo '
         <th class=p5>Aktion</th>
     </tr>
     </thead>
-</table>';
+</table>
 
+
+<?php
 /*
 //serverside 
     $results = Property::getAll();
