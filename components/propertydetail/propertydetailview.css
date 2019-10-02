@@ -1,0 +1,7 @@
+.google-maps #map{
+    height: 350px;
+    width: 75%;
+}
+.google-maps.hidden {
+    display: none;
+}

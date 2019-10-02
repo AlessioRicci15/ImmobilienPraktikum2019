@@ -17,5 +17,6 @@
     </main>
     <?php
         include("layout/footer.php");
+        include("layout/foot.php");
     ?>
 </body>

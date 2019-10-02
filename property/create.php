@@ -1,6 +1,6 @@
 <article>
     <h4>Erfasse eine Immobilie</h4>
     <?php
-        include("formularcreatproperty.php");
+        include("components/propertycreate/formularcreateproperty.php");
     ?>            
 </article>

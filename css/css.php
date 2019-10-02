@@ -12,7 +12,8 @@ $css = array(
     'liste.css',
     'main.css',
     'nav.css',
-    'table.css',
+    '../components/propertytable/propertytable.css',
+    '../components/propertydetail/propertydetailview.css',
     'text.css'
 );
 

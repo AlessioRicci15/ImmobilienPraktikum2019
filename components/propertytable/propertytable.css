@@ -1,28 +1,34 @@
-table {
+.property-table, .allPropertiesTable {
     width: 100%;
     background-color: rgb(240,240,242);
     color: black;
 }
-td, th {
+.property-table td, .property-table th {
     width: 100px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 5px;
 }
-th {
+.property-table th {
     text-align: left;
     padding: 5px;
 }
-td {
+.property-table td {
     height: 20px;
 }
-table a:hover {
+.property-table a:hover {
     text-decoration-line: underline;
+}
+.property-table .lang {
+    width: 50px;
 }
 
 @media screen and (max-width: 1000px) {
-    td, th {
+    .property-table .p3 {
+        display: none;
+    }
+    .property-table td, .property-table th {
         max-width: 100px;
         white-space: nowrap;
         overflow: hidden;
@@ -31,7 +37,13 @@ table a:hover {
 }
 
 @media screen and (max-width: 600px) {
-    td, th {
+    .property-table .p2 {
+        display: none;
+    }
+    .property-table .p3 {
+        display: none;
+    }
+    .property-table td, .property-table th {
         max-width: 100px;
         white-space: nowrap;
         overflow: hidden;
@@ -40,7 +52,19 @@ table a:hover {
 }
 
 @media screen and (max-width: 500px) {
-    td, th {
+    .property-table .p2 {
+        display: none;
+    }
+    .property-table .p3 {
+        display: none;
+    }
+    .property-table .p4 {
+        display: none;
+    }
+    .property-table .p5 {
+        max-width: 50px;
+    }
+    .property-table td, .property-table th {
         max-width: 100px;
         white-space: nowrap;
         overflow: hidden;

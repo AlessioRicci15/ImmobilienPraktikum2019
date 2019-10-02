@@ -1,18 +1,16 @@
-<div class="property_table"></div>
-
-
-<table border="1" id="allPropertiesTable">
-    <thead>
-    <tr>
-        <th class=p1>Adresse</th>
-        <th class=p2>Land</th>
-        <th class=p3>Baujahr</th>
-        <th class=p4>Preis</th>
-        <th class=p5>Aktion</th>
-    </tr>
-    </thead>
-</table>
-
+<div class="property-table">
+    <table border="1" class="allPropertiesTable">
+        <thead>
+            <tr>
+                <th class=p1>Adresse</th>
+                <th class=p2>Land</th>
+                <th class=p3>Baujahr</th>
+                <th class=p4>Preis</th>
+                <th class=p5>Aktion</th>
+            </tr>
+        </thead>
+    </table>
+</div>
 
 <?php
 /*
