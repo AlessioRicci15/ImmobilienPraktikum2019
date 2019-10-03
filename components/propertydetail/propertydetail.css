@@ -1,7 +1,7 @@
-.google-maps #map{
+.propertydetail_map #map{
     height: 350px;
     width: 75%;
 }
-.google-maps.hidden {
+.propertydetail_map.hidden {
     display: none;
 }

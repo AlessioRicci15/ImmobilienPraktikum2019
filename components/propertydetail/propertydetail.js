@@ -2,9 +2,6 @@ var currentURL = window.location.href;
 var URL = currentURL.split("/");
 var idurl = URL[5];
 
-var lat = ; //not working
-var lng = ;
-
 function renderDetail(property, propertyDetailContext){
     var h5Adresse = document.createElement("h5");
     var pAdresse = document.createElement("p");
@@ -28,14 +25,26 @@ function renderDetail(property, propertyDetailContext){
     propertyDetailContext.appendChild(pWeiteresBaujahr);
 
     if (property.lat) {
-        const mapcontainer = document.querySelector('.google-maps');
+        const mapcontainer = document.querySelector('.propertydetail_map');
         mapcontainer.classList.remove('hidden');
+        document.querySelector(".propertydetail_map").setAttribute("data-lat", property.lat); 
+        document.querySelector(".propertydetail_map").setAttribute("data-lng", property.lng);
+        
+        loadGoogleMapsApi();
     };
 }
 
+function loadGoogleMapsApi() {
+    let script = document.createElement("script");
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAssHWGVrFbQD1XsN-DcR-8FV_zupuROI4&callback=initMap";
+    script.type = "text/javascript";
+    document.getElementsByTagName("head")[0].appendChild(script);
+}
+
 function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: lat, lng: lng},
+    map = new google.maps.Map(document.querySelector('#map'), {
+        center: {lat: parseFloat(document.querySelector(".propertydetail_map").getAttribute("data-lat")),
+                 lng: parseFloat(document.querySelector(".propertydetail_map").getAttribute("data-lng"))},
         zoom: 15,
         mapTypeId: 'satellite'
     });
@@ -51,40 +60,7 @@ function getInformations(propertyDetailContext) {
     });
 }
 
-const propertyDetailContext = document.querySelector(".detail");
+const propertyDetailContext = document.querySelector(".propertydetail_info");
     if (propertyDetailContext) {
         getInformations(propertyDetailContext);
-    }   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-    if(view=='edit'){
-        var showPromise = fetch('/api/properties/'+idurl);
-        showPromise.then(function(response) {
-        return response.json();
-        }).then(function(json){
-            
-        })}}
-    };
-*/
+    }

@@ -13,7 +13,7 @@ $css = array(
     'main.css',
     'nav.css',
     '../components/propertytable/propertytable.css',
-    '../components/propertydetail/propertydetailview.css',
+    '../components/propertydetail/propertydetail.css',
     'text.css'
 );
 

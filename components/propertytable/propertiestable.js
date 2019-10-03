@@ -1,7 +1,13 @@
 function addTableRow(node, entry ) {
+/*
+    var rowHTML = renderTemplate('template-property-table', entry);
+    node.appendChild(rowHTML);
+*/
+    
     var row = node.insertRow(1);
     row.id = 'rowID'+entry.id;
 
+    
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
@@ -25,6 +31,7 @@ function addTableRow(node, entry ) {
     cell3.innerHTML = entry.Baujahr;
     cell4.innerHTML = entry.Preis; 
     cell5.innerHTML = '<a href="properties/show/'+entry.id+'"><i class="fa fa-eye"></i>  Show</a><br><a href="properties/edit/'+entry.id+'"><i class="fa fa-edit"></i> Edit</a><br><a onclick="deleteProperty('+entry.id+')"><i class="fa fa-trash"></i> Remove</a>';
+    
 }
 
 function deleteProperty(id) {

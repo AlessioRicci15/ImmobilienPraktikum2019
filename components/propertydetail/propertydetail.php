@@ -1,16 +1,12 @@
 <article class="small">
 
-<div class="detail"></div>
-<div class="google-maps hidden">
-  <p>Google Maps:</p>
-  <div id="map"></div>
+<div class="propertydetail">
+  <div class="propertydetail_info"></div>
+  <div class="propertydetail_map hidden">
+    <p>Google Maps:</p>
+    <div id="map"></div>
+  </div>
 </div>
-
-<script 
-  src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAssHWGVrFbQD1XsN-DcR-8FV_zupuROI4&callback=initMap'
-  async
-  defer>
-</script>
 
 <?php
 /*
