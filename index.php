@@ -18,6 +18,5 @@
     <?php
         include("layout/footer.php");
         include("layout/foot.php");
-        include("js/templates.php");
     ?>
 </body>

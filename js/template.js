@@ -1,16 +1,20 @@
 function renderTemplate(templateId, data){
-    let html;
+    let template = document.getElementById(templateId).innerHTML;
+    const properties = Object.keys(data);
 
-    // 1. get template by id
-    const template = null;
+    // Replace placeholders by input data
+    properties.forEach(function(property){
+        var regex = new RegExp('{{'+property+'}}','gi');
+        template = template.replace(regex, data[property]);
+    });
 
-    // 2. replace all '{{data.%identifyer%}}' by data.%identifyer%
-        // 2.1 search all placeholders '{{data.%identifyer%}}' in template
-        // 2.2 loop over search result 
-           // -> if data is available, replace placeholder
-           // -> if no data is available, send error to console
+    // Find remaining placeholders
+    regex = new RegExp('{{(.*)}}', 'gi');
+    const matches = template.matchAll(regex);
 
-    // 3. return html with replaced placeholders
-
-    return html;
+    for (const match of matches) {
+        console.error(`Placeholder "${match[0]}" in template "${templateId}" konnte nicht ersetzt werden`);
+    }
+       
+    return template;
 };

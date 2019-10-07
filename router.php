@@ -83,6 +83,26 @@ if ($view === 'api') {
                         break;
                 };
                 break;
+            case 'properties?orderby=Adresse&orderdirection=asc':     
+                $pageTitle = 'Properties';
+                $navigation = 'properties';
+                $view = 'properties.php';
+                break;
+            case 'properties?orderby=Landname&orderdirection=asc':     
+                $pageTitle = 'Properties';
+                $navigation = 'properties';
+                $view = 'properties.php';
+                break;
+            case 'properties?orderby=Baujahr&orderdirection=asc':     
+                $pageTitle = 'Properties';
+                $navigation = 'properties';
+                $view = 'properties.php';
+                break;
+            case 'properties?orderby=Preis&orderdirection=asc':     
+                $pageTitle = 'Properties';
+                $navigation = 'properties';
+                $view = 'properties.php';
+                break;
             default:
                 $pageTitle = '404';
                 $navigation = '';
