@@ -137,7 +137,7 @@
                            `land`.`Landname`
                     FROM `immobilien`
                     LEFT JOIN `land` ON `immobilien`.`Land` = `land`.`LandID`
-                    ORDER BY '$attribut' $direction";
+                    ORDER BY `$attribut` $direction";
             $result = $conn->query($sql);
             $results = [];
             while ($row = $result->fetch_assoc())

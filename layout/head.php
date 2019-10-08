@@ -1,4 +1,3 @@
-<html lang="en">
 <head>
     <title>Immobilien</title>
     <meta charset="UTF-8">

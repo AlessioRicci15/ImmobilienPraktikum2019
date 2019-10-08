@@ -1,7 +1,6 @@
 <?php
 header("Content-type: text/css");
 
-// PHP FIND FILES BY GLOB PATTERN
 $css = array(
     'article.css',
     'body.css',
@@ -21,9 +20,7 @@ $css = array(
 $css_content = '';
 
 foreach ($css as $css_file) {
-    $css_content .= '<script id="">';
     $css_content .= file_get_contents($css_file);
-    $css_content .= '</script>';
 }
 echo $css_content;
 ?>

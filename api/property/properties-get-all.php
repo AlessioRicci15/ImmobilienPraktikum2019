@@ -2,12 +2,20 @@
 
 header('Content-Type: application/json');
 
+$orderBy = filter_input(INPUT_GET,"orderby",FILTER_SANITIZE_STRING);
+$orderDirection = filter_input(INPUT_GET,"orderdirection",FILTER_SANITIZE_STRING);
+
 $propertyInstance = new Property();
 
-// GET URL PARAMS FOR ORDERBY AND ORDERDIRECTION
-// PASS PARAMETERS TO getAll();
+if($orderBy === null || $orderDirection === null){
+    $attribut = 'id';
+    $direction = 'ASC'; 
+} else {
+    $attribut = $orderBy;
+    $direction = $orderDirection; 
+}
 
-$properties = $propertyInstance->getAll();
+$properties = $propertyInstance->getAll($attribut, $direction);
 
 echo json_encode($properties,true);
 
