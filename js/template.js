@@ -13,7 +13,8 @@ function renderTemplate(templateId, data){
     const matches = template.matchAll(regex);
 
     for (const match of matches) {
-        console.error(`Placeholder "${match[0]}" in template "${templateId}" konnte nicht ersetzt werden`);
+        console.error(`Placeholder "${match[0]}" in template "${templateId}" konnte nicht ersetzt werden
+        (kein Datensatz im JSON vorhanden)`);
     }
        
     return template;

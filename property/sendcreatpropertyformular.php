@@ -13,9 +13,6 @@
     );
     if ($created)
     {
-        include("layout/maincreatproperty.php");
-    } else
-    {
-        include("layout/maincreatfalse.php");
+        include("properties.php"); 
     }
 ?>

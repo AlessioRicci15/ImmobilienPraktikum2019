@@ -3,23 +3,23 @@
         <thead>
             <tr>
                 <th class="p1">
-                    Adresse <button class="notaknopf" onclick="sortTable('Ort', 'DESC')">
-                        <i class="arrow i-header"></i>
+                    Adresse <button class="notaknopf" onclick="sortTable('Ort', 'ASC', 'Adresse')">
+                        <i id="iconArrowAdresse" class="arrow i-header"></i>
                     </button>
                 </th>
                 <th class="p2">
-                    Land <button class="notaknopf" onclick="sortTable('Landname', 'DESC')">
-                        <i class="arrow i-header"></i>
+                    Land <button class="notaknopf" onclick="sortTable('Landname', 'ASC', 'Land')">
+                        <i id="iconArrowLand" class="arrow i-header"></i>
                     </button>
                 </th>
                 <th class="p3">
-                    Baujahr <button class="notaknopf" onclick="sortTable('Baujahr', 'DESC')">
-                        <i class="arrow i-header"></i>
+                    Baujahr <button class="notaknopf" onclick="sortTable('Baujahr', 'DESC', 'Baujahr')">
+                        <i id="iconArrowBaujahr" class="arrow i-header"></i>
                     </button>
                 </th>
                 <th class="p4">
-                    Preis <button class="notaknopf" onclick="sortTable('Preis', 'DESC')">
-                        <i class="arrow i-header"></i>
+                    Preis <button class="notaknopf" onclick="sortTable('Preis', 'DESC', 'Preis')">
+                        <i id="iconArrowPreis" class="arrow i-header"></i>
                     </button>
                 </th>
                 <th class="p5">

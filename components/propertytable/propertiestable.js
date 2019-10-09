@@ -1,6 +1,15 @@
 function addTableRow(node, entry ) {
     var rowHTML = renderTemplate('template-property-table', entry);
     node.insertAdjacentHTML('beforeend', rowHTML);
+
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'CHF'
+      })
+    var id = entry.id;
+    var value = document.getElementById("currency"+id).innerHTML;
+    var newValue = formatter.format(value);
+    document.getElementById("currency"+id).innerHTML = newValue;
 }
 
 function deleteProperty(id) {
@@ -14,7 +23,73 @@ function deleteProperty(id) {
     document.getElementById('rowID'+id).remove();      
 }
 
-function sortTable(orderby, direction) {
+var statusOrderAdresse = true;  
+var statusOrderLand = true;  
+var statusOrderBaujahr = true;  
+var statusOrderPreis = true;  
+
+function sortTable(orderby, direction, attributarrow) {
+    var element;
+    element = document.getElementById("iconArrowAdresse");
+    element.classList.remove("up", "down");
+    element = document.getElementById("iconArrowLand");
+    element.classList.remove("up", "down");
+    element = document.getElementById("iconArrowBaujahr");
+    element.classList.remove("up", "down");
+    element = document.getElementById("iconArrowPreis");
+    element.classList.remove("up", "down");
+
+    switch (attributarrow){
+        case 'Adresse':
+        if(statusOrderAdresse === false){
+            element = document.getElementById("iconArrowAdresse");
+            element.classList.add("down");
+            statusOrderAdresse = true;  
+            direction = 'DESC';
+        } else {
+            element = document.getElementById("iconArrowAdresse");
+            element.classList.add("up");
+            statusOrderAdresse = false;
+        }
+        break;
+        case 'Land':
+        if(statusOrderLand === false){
+            element = document.getElementById("iconArrowLand");
+            element.classList.add("down");
+            statusOrderLand = true;   
+            direction = 'DESC';
+        } else {
+            element = document.getElementById("iconArrowLand");
+            element.classList.add("up");
+            statusOrderLand = false;
+        }
+        break;
+        case 'Baujahr':
+        if(statusOrderBaujahr === false){
+            element = document.getElementById("iconArrowBaujahr");
+            element.classList.add("down");
+            statusOrderBaujahr = true;   
+            direction = 'ASC';
+        } else {
+            element = document.getElementById("iconArrowBaujahr");
+            element.classList.add("up");
+            statusOrderBaujahr = false;
+        }
+        break;
+        case 'Preis':
+        if(statusOrderPreis === false){
+            element = document.getElementById("iconArrowPreis");
+            element.classList.add("down");
+            statusOrderPreis = true;   
+            direction = 'ASC';
+        } else {
+            element = document.getElementById("iconArrowPreis");
+            element.classList.add("up");
+            statusOrderPreis = false;
+        }
+        break;
+    }
+
     var propertiesPromise = fetch('/api/properties?orderby='+orderby+'&orderdirection='+direction);
     propertiesPromise.then(function(response) {
         return response.json();
@@ -26,6 +101,7 @@ function sortTable(orderby, direction) {
         response.forEach(function(propertyEntry) {
             addTableRow(tableNode, propertyEntry);
         });
+
     });
 }
 

@@ -10,9 +10,6 @@
     );
     if ($isChanged)
     {
-        include("layout/maineditproperty.php"); 
-    } else
-    {
-        include("layout/maineditfalse.php");
+        include("properties.php"); 
     }
 ?>

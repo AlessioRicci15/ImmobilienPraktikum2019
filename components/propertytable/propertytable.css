@@ -6,7 +6,7 @@
 .property-table .notaknopf{
     border: 0;
     margin: 0;
-    padding: 0;
+    padding: 2px;
 }
 .property-table td, .property-table th {
     width: 100px;

@@ -4,17 +4,17 @@
       $id
     );  
 ?>
-<form method="post" action="../sendeditpropertyformular/<?php echo $property['id'] ?>">
+<form method="post" id="formEdit">
     Adresse:
     <br>
-        <input name="adresse" type="text"  value="<?php echo"{$property['Ort']}"?>" style="width: 50%; height:30px;">
+        <input id="formadresseedit" name="adresse" type="text"  value="<?php echo"{$property['Ort']}"?>" style="width: 50%; height:30px;">
     <br>
     Land:
     <br>
     <?php
         $country = new Country();
         $countries = $country->orderedCountries();
-        echo '<select name="land">';
+        echo '<select id="formlandedit" name="land">';
         foreach ($countries as $country){
             if($property['LandID'] == $country['LandID']){
                 echo "<option selected value={$country['LandID']}>{$country['Landname']}</option>";
@@ -28,10 +28,10 @@
         <br> 
     Baujahr:
     <br>
-        <input type="text" name="baujahr" value="<?php echo "{$property['Baujahr']}"?>"  style="width: 250px"><br>
+        <input id="formbaujahredit" type="text" name="baujahr" value="<?php echo "{$property['Baujahr']}"?>"  style="width: 250px"><br>
     Preis:
     <br>
-        <input type="text" name="preis"  value="<?php echo "{$property['Preis']}"?>"  style="width: 250px">
+        <input id="formpreisedit" type="text" name="preis"  value="<?php echo "{$property['Preis']}"?>"  style="width: 250px">
     <br><br>
-        <button type="submit">Speichern</button>
+        <input type="submit" value='Speichern' style="width: 250px">   
 </form>

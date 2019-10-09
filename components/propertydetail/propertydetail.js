@@ -3,6 +3,14 @@ var URL = currentURL.split("/");
 var idurl = URL[5];
 
 function renderDetail(property, propertyDetailContext){
+
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'CHF'
+      })
+    var value = property.Preis;
+    var newValue = formatter.format(value);
+
     var h5Adresse = document.createElement("h5");
     var pAdresse = document.createElement("p");
     var h5Preis = document.createElement("h5");
@@ -13,7 +21,7 @@ function renderDetail(property, propertyDetailContext){
     h5Adresse.innerHTML = 'Adresse:';
     pAdresse.innerHTML = property.Ort + ' in ' + property.Landname + '<hr>';
     h5Preis.innerHTML = 'Preis:';
-    pPreis.innerHTML = 'CHF ' + property.Preis;
+    pPreis.innerHTML = newValue;
     h5Weiteres.innerHTML = 'Weiteres:';
     pWeiteresBaujahr.innerHTML = 'Baujahr: ' + property.Baujahr;
 
