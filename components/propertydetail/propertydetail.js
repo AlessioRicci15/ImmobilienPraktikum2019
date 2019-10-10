@@ -69,6 +69,6 @@ function getInformations(propertyDetailContext) {
 }
 
 const propertyDetailContext = document.querySelector(".propertydetail_info");
-    if (propertyDetailContext) {
-        getInformations(propertyDetailContext);
-    }
+if (propertyDetailContext) {
+    getInformations(propertyDetailContext);
+}

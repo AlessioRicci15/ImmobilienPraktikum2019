@@ -4,6 +4,8 @@ header("Content-type: text/javascript");
 $js = array(
     '../components/propertytable/propertiestable.js',
     '../components/propertydetail/propertydetail.js',
+    '../components/propertyedit/propertyedit.js',
+    '../components/propertycreate/propertycreat.js',
     'template.js'
 
 );

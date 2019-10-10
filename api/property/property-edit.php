@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 $propertyInstance = new Property();
 
-$data = json_decode(file_get_contents('php://input'), true);
+$data = json_decode(file_get_contents("php://input"), true);
 
 function all_array_keys_exist($array, $keys) {
     $exist = 0;

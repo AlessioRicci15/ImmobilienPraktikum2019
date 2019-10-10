@@ -4,7 +4,6 @@
     include("model/Property.php");
     include("router.php");     
 ?>
-
 <!DOCTYPE html>
     <html lang="en">
     <?php include("layout/head.php"); ?>
