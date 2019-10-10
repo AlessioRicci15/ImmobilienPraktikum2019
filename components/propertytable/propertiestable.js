@@ -1,7 +1,6 @@
 function addTableRow(node, entry ) {
     var rowHTML = renderTemplate('template-property-table', entry);
     node.insertAdjacentHTML('beforeend', rowHTML);
-
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'CHF'
@@ -11,7 +10,6 @@ function addTableRow(node, entry ) {
     var newValue = formatter.format(value);
     document.getElementById("currency"+id).innerHTML = newValue;
 }
-
 function deleteProperty(id) {
     var deleteRowPromise = fetch('/api/properties/'+id, {
         method: 'DELETE'});
@@ -22,12 +20,10 @@ function deleteProperty(id) {
     });   
     document.getElementById('rowID'+id).remove();      
 }
-
 var statusOrderAdresse = true;  
 var statusOrderLand = true;  
 var statusOrderBaujahr = true;  
 var statusOrderPreis = true;  
-
 function sortTable(orderby, direction, attributarrow) {
     var element;
     element = document.getElementById("iconArrowAdresse");
@@ -38,7 +34,6 @@ function sortTable(orderby, direction, attributarrow) {
     element.classList.remove("up", "down");
     element = document.getElementById("iconArrowPreis");
     element.classList.remove("up", "down");
-
     switch (attributarrow){
         case 'Adresse':
         if(statusOrderAdresse === false){
@@ -89,7 +84,6 @@ function sortTable(orderby, direction, attributarrow) {
         }
         break;
     }
-
     var propertiesPromise = fetch('/api/properties?orderby='+orderby+'&orderdirection='+direction);
     propertiesPromise.then(function(response) {
         return response.json();
@@ -104,7 +98,6 @@ function sortTable(orderby, direction, attributarrow) {
 
     });
 }
-
 function renderTable(componentNode) {
     var propertiesPromise = fetch('/api/properties');
     propertiesPromise.then(function(response) {
@@ -117,7 +110,6 @@ function renderTable(componentNode) {
         });
     });
 }
-
 const propertyTableContext = document.querySelectorAll(".property-table");
     if (propertyTableContext) {
         propertyTableContext.forEach(componentNode => {

@@ -1,6 +1,5 @@
 <?php
 header("Content-type: text/css");
-
 $css = array(
     'article.css',
     'body.css',
@@ -16,9 +15,7 @@ $css = array(
     '../components/propertydetail/propertydetail.css',
     'text.css'
 );
-
 $css_content = '';
-
 foreach ($css as $css_file) {
     $css_content .= file_get_contents($css_file);
 }

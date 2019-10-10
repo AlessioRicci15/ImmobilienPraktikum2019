@@ -3,7 +3,6 @@
     {
         private $LandID;
         private $Landname;
-        
         function setLandID($newLandID){
             $this->LandID = $newLandID;
         }
@@ -22,15 +21,11 @@
                                    `land`.`Landname`
                             FROM `land`
                             ORDER BY `Landname` ASC";
-
             $result = $conn->query($landesliste);
-
             $countries = [];
-
             while ($row = $result->fetch_assoc()) {
                 array_push($countries, $row);
             }
-
             return $countries;
         }
     }

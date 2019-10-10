@@ -54,7 +54,6 @@
             global $conn;
             $isCreated = "INSERT INTO immobilien (Ort, Baujahr, Preis, Land)
                         values ('$adress','$baujahr','$price','$land')";
-
             if ($conn->query($isCreated))
             {
                 return true;

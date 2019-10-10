@@ -24,7 +24,6 @@
         }
         echo '</select>';
     ?>
-    
         <br> 
     Baujahr:
     <br>

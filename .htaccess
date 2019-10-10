@@ -1,5 +1,4 @@
 Options -Indexes
-
 RewriteEngine on
 RewriteRule /api/(.*) /$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f

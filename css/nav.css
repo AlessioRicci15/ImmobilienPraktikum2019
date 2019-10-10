@@ -24,14 +24,12 @@ nav li:hover {
     background-color: rgb(243,123,105);
     color: black;
 }
-
 @media screen and (max-width: 600px) {
     nav li {
         display: block;
         float: left;
     }
 }
-
 @media screen and (max-width: 500px) {
     nav a {
         display: block;

@@ -1,7 +1,6 @@
 <?php
 $url_parts = explode('?', $resource);
 $resource = $url_parts[0];
-
 switch ($resource):
     case 'properties':
         if ($id < 1) {
@@ -22,6 +21,5 @@ switch ($resource):
         include($view);
         break;
 endswitch;
-
 exit;
 ?>

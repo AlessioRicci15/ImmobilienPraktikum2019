@@ -5,8 +5,7 @@
     );
     if ($isDeleted){
         include("layout/mainremoveproperty.php");
-        }
-        else{
+    } else {
         include("layout/mainremovefalse.php");
-        }
+    }
 ?>

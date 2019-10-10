@@ -48,7 +48,6 @@ function loadGoogleMapsApi() {
     script.type = "text/javascript";
     document.getElementsByTagName("head")[0].appendChild(script);
 }
-
 function initMap() {
     map = new google.maps.Map(document.querySelector('#map'), {
         center: {lat: parseFloat(document.querySelector(".propertydetail_map").getAttribute("data-lat")),
@@ -57,7 +56,6 @@ function initMap() {
         mapTypeId: 'satellite'
     });
 }
-
 function getInformations(propertyDetailContext) {
     var showPromise = fetch('/api/properties/'+idurl);
     showPromise.then(function(response) {
@@ -67,7 +65,6 @@ function getInformations(propertyDetailContext) {
         renderDetail(property, propertyDetailContext);
     });
 }
-
 const propertyDetailContext = document.querySelector(".propertydetail_info");
 if (propertyDetailContext) {
     getInformations(propertyDetailContext);

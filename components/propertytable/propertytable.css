@@ -42,7 +42,6 @@
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-
 @media screen and (max-width: 1000px) {
     .property-table .p3 {
         display: none;
@@ -54,7 +53,6 @@
         text-overflow: ellipsis;
     }
 }
-
 @media screen and (max-width: 600px) {
     .property-table .p2 {
         display: none;
@@ -69,7 +67,6 @@
         text-overflow: ellipsis;
     }
 }
-
 @media screen and (max-width: 500px) {
     .property-table .p2 {
         display: none;
