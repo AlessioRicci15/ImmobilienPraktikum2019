@@ -3,10 +3,21 @@
     background-color: rgb(240,240,242);
     color: black;
 }
+#serchinputadresse{
+    width: 60vh; 
+    min-width: 150px; 
+    max-width: 30vh; 
+    margin-bottom: 5px; 
+    height: 5vh; 
+    min-height: 25px;
+}
 .property-table .notaknopf{
     border: 0;
     margin: 0;
     padding: 2px;
+}
+.property-table .hidden{
+    display: none;
 }
 .property-table td, .property-table th {
     width: 100px;

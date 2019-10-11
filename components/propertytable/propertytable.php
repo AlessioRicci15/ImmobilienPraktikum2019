@@ -1,3 +1,4 @@
+<input type="text" id="serchinputadresse" onchange="searchAdresse()" onkeyup="searchAdresse()" onkeydown="searchAdresse()" onkeypress="searchAdresse()" placeholder="Search for adresse..." >
 <div class="property-table">
     <table border="1" class="allPropertiesTable">
         <thead>
@@ -29,4 +30,3 @@
         <tbody class="allPropertiesTableBody"></tbody>
     </table>
 </div>
-

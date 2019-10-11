@@ -15,6 +15,6 @@
     Aber auch allen mit dennen ich Ping Pong oder FIFA gespielt habe, so wie an diejenigen mit denne ich gegessen habe, bedanke ich mich.<br><br>
     Die Zeit bei Frontify werde ich vermissen. Das Treppen steigen und jedem, auch wenn man ihn nicht kennt, Hallo zu sagen.<br>
     Wie auch den Gesprächen beim Kaffe und das Familiere Klima.<br><br><br>
-    <h1>Danke Frontify für das unvergessliche Praktikum!</h1>
+    <h1>Danke Frontify, für das unvergessliche Praktikum!</h1>
 </article>
 <img src="img/logo_frontify.png" alt="Logo Frontify" style="width: 70vh">

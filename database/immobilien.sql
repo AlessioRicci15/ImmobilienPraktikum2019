@@ -64,7 +64,7 @@ INSERT INTO `immobilien` (`id`, `Land`, `Ort`, `Preis`, `Baujahr`, `lat`, `lng`)
 (19, 5, '7515 Los Osos Valley Road San Luis Obispo, Kalifornien 93405', 6900000, 1932, 35.279621, -120.740646),
 (20, 5, '168 Tobin Clark Drive Hillsborough, Kalifornien 94010', 7299000, 1990, 37.541809, -122.332573),
 (21, 5, '3 Point Crescent Malba, New York 11357', 5988000, 1995, 40.791248, -73.830704),
-(22, 5, '218 Shell Beach Dr Lake Charles, Louisiana 70601', 5250000, 2014, 30.217131, -93.236572),
+(22, 5, '218 Shell Beach DriveLake Charles, Louisiana 70601', 5250000, 2014, 30.217131, -93.236572),
 (23, 5, '604 Edgecreek Dr. Myrtle Beach, South Carolina 29579', 539999, 2019, 33.74815, -78.869568),
 (24, 5, '40 SE CR 4210 Mt Vernon, Texas 75457', 5950000, 2004, 33.068138, -95.134987),
 (25, 5, '216 Hale Ave S Tampa, Florida 33609', 1250000, 2018, 27.941441, -82.510643),
@@ -93,13 +93,12 @@ INSERT INTO `immobilien` (`id`, `Land`, `Ort`, `Preis`, `Baujahr`, `lat`, `lng`)
 (48, 5, '601 N. Hollywood BlvdLas Vegas, Nevada 89110', 6000000, 2016, 36.17012, -115.028137),
 (49, 5, '46920 Pontiac TrailCommerce Twp, Michigan 48390', 5500000, 1967, 43.924812, -84.633107),
 (50, 5, '3456 Lynx Ridge RoadPaso Robles, Kalifornien 93446', 5400000, 0, 36.531544, -119.586168),
-(51, 5, '218 Shell Beach DriveLake Charles, Louisiana 70601', 5250000, 2014, 30.220339, -93.22451),
-(52, 5, '15 AURIEMMA CTLanding, New Jersey 07850', 5000000, 2009, 40.918444, -74.65284),
-(53, 5, '5225 E Hwy 41Paso Robles, Kalifornien 93446', 5000000, 2001, 35.62664, -120.691),
-(54, 5, '31 Netherfield WayThe Woodlands, Texa 77382', 4954000, 2006, 30.2106, -95.5257),
-(55, 5, '2339 20th Avenue SE, Tuttle, North Dakota 58488', 1100000, 2016, 47.073981, -100.072856),
-(56, 5, '1728 Union Hill Road, Ennis, Texa 75119', 1250000, 2006, 32.3321, -96.6224),
-(57, 5, '709 EASTLAWN DR CELEBRATION, Florida 34747', 2475000, 2002, 28.3130363, -81.5459143);
+(51, 5, '15 AURIEMMA CTLanding, New Jersey 07850', 5000000, 2009, 40.918444, -74.65284),
+(52, 5, '5225 E Hwy 41Paso Robles, Kalifornien 93446', 5000000, 2001, 35.62664, -120.691),
+(53, 5, '31 Netherfield WayThe Woodlands, Texa 77382', 4954000, 2006, 30.2106, -95.5257),
+(54, 5, '2339 20th Avenue SE, Tuttle, North Dakota 58488', 1100000, 2016, 47.073981, -100.072856),
+(55, 5, '1728 Union Hill Road, Ennis, Texa 75119', 1250000, 2006, 32.3321, -96.6224),
+(56, 5, '709 EASTLAWN DR CELEBRATION, Florida 34747', 2475000, 2002, 28.3130363, -81.5459143);
 
 -- --------------------------------------------------------
 

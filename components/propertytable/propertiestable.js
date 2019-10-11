@@ -9,6 +9,10 @@ function addTableRow(node, entry ) {
     var value = document.getElementById("currency"+id).innerHTML;
     var newValue = formatter.format(value);
     document.getElementById("currency"+id).innerHTML = newValue;
+    let noBaujahr = document.getElementById("noBaujahr"+id).innerHTML;
+    if(noBaujahr === '0'){
+        document.getElementById("noBaujahr"+id).innerHTML = '';
+    }
 }
 function deleteProperty(id) {
     var deleteRowPromise = fetch('/api/properties/'+id, {
@@ -116,3 +120,23 @@ const propertyTableContext = document.querySelectorAll(".property-table");
                 renderTable(componentNode);
         });
     }
+function searchAdresse(){
+    let inputTag = document.querySelector('#serchinputadresse');
+    let input = inputTag.value;
+    let adresseColumnTags = document.querySelectorAll('#adresseColumn');
+    let adresseColumn;
+    let matchingTag;
+    let rowAdresses = document.querySelector('.allPropertiesTableBody').getElementsByTagName('tr');
+    let rowSelect = 0;
+    adresseColumnTags.forEach(function (adresseColumnTag){
+        rowAdresses[rowSelect].classList.remove('hidden');
+        adresseColumn = adresseColumnTag.innerText;
+        adresseColumn = adresseColumn.toUpperCase();
+        input = input.toUpperCase();
+        matchingTag = adresseColumn.search(input);
+        if(matchingTag === -1){
+            rowAdresses[rowSelect].classList.add('hidden');  
+        }
+        rowSelect += 1;
+    });
+}
