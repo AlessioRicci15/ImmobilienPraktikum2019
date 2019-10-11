@@ -13,8 +13,8 @@
     An Maira, Claudia, Yvonne und Adrien will ich mich für den Tag mit einblick in HR, Finance and Administration desweiteren Bedanken.<br>
     Auch für die Aufklärung der IT-Securaty bedanke ich mich bei Peter und für das Erklären was ein Product Manager macht bedanke ich mich bei Rafael.<br>
     Aber auch allen mit dennen ich Ping Pong oder FIFA gespielt habe, so wie an diejenigen mit denne ich gegessen habe, bedanke ich mich.<br><br>
-    Die Zeit bei Frontify werde ich vermissen. Das Treppen steigen und jedem, auch wenn man ihn nicht kennt, Hallo zu sagen.<br>
+    Die Zeit bei Frontify werde ich vermissen. Das Treppen steigen und jedem, auch wenn man ihn nicht kennt, 'Hallo' zu sagen.<br>
     Wie auch den Gesprächen beim Kaffe und das Familiere Klima.<br><br><br>
-    <h1>Danke Frontify, für das unvergessliche Praktikum!</h1>
+    <h1>Danke <a href="https://www.frontify.com/en/" target="_blank">Frontify</a>, für das unvergessliche Praktikum!</h1>
 </article>
-<img src="img/logo_frontify.png" alt="Logo Frontify" style="width: 70vh">
+<a href="https://www.frontify.com/en/" target="_blank"><img src="img/logo_frontify.png" alt="Logo Frontify" style="width: 70vh"></a>
