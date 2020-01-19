@@ -4,3 +4,7 @@ header {
     height: 108px;
     background-color: rgb(96,199,215);
 }
+header h1{
+    text-align: center;
+    margin-top: 34.8px;
+}

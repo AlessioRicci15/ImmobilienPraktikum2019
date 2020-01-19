@@ -35,6 +35,26 @@ if ($view === 'api') {
                 $navigation = 'properties';
                 $view = 'properties.php';
                 break;
+            case 'stocks':
+                $pageTitle = 'Stocks';
+                $navigation = 'stocks';
+                $view = 'stocks.php';
+                break;
+            case 'bonds':
+                $pageTitle = 'Bonds';
+                $navigation = 'bonds';
+                $view = 'bonds.php';
+                break;
+            case 'reits':
+                $pageTitle = 'REITs';
+                $navigation = 'reits';
+                $view = 'reits.php';
+                break;
+            case 'etfs':
+                $pageTitle = 'ETFs';
+                $navigation = 'etfs';
+                $view = 'etfs.php';
+                break;
             case 'properties':
                 switch ($function) {
                     case '':

@@ -2,3 +2,15 @@ h1, h2, h3, h4, a {
     color: black;
     text-decoration: none;
 }
+h3 {
+    font-size: 100%;
+}
+@media screen and (max-width: 730px) {
+    h3 {
+        font-size: 50%;
+    }
+    nav {
+        padding: 0px;
+        height: 39.9px;
+    }
+}
