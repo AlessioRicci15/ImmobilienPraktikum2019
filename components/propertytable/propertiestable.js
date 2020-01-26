@@ -140,3 +140,23 @@ function searchAdresse(){
         rowSelect += 1;
     });
 }
+function searchCountry(){
+    let inputTag = document.querySelector('#serchinputcountry');
+    let input = inputTag.value;
+    let adresseColumnTags = document.querySelectorAll('#countryColumn');
+    let adresseColumn;
+    let matchingTag;
+    let rowAdresses = document.querySelector('.allPropertiesTableBody').getElementsByTagName('tr');
+    let rowSelect = 0;
+    adresseColumnTags.forEach(function (adresseColumnTag){
+        rowAdresses[rowSelect].classList.remove('hidden');
+        adresseColumn = adresseColumnTag.innerText;
+        adresseColumn = adresseColumn.toUpperCase();
+        input = input.toUpperCase();
+        matchingTag = adresseColumn.search(input);
+        if(matchingTag === -1){
+            rowAdresses[rowSelect].classList.add('hidden');  
+        }
+        rowSelect += 1;
+    });
+}

@@ -1,3 +1,3 @@
 <footer>
-        <h4>Alessio Ricci ©</h4>
+        <h4><a href="/impressum">Alessio Ricci ©</a></h4>
 </footer>

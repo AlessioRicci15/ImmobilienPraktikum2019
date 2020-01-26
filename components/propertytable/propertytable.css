@@ -16,6 +16,14 @@
     height: 5vh; 
     min-height: 25px;
 }
+#serchinputcountry{
+    width: 60vh; 
+    min-width: 150px; 
+    max-width: 30vh; 
+    margin-bottom: 5px; 
+    height: 5vh; 
+    min-height: 25px;
+}
 .property-table .notaknopf{
     border: 0;
     margin: 0;
@@ -25,9 +33,6 @@
     display: none;
 }
 .property-table td, .property-table th {
-    width: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     padding-left: 5px;
 }
 .property-table th {
@@ -58,17 +63,57 @@
     -webkit-transform: rotate(45deg);
 }
 .p1 .lang {
-    overflow: hidden;
-    text-overflow: ellipsis 
+    width: 65%;
 }
+.p2 {
+    width: 15%; 
+}
+.p3 {
+    width: 10%;
+}
+.p4 {
+    width: 20%;
+}
+.p5 {
+    width: 10%;
+}
+
 @media screen and (max-width: 1000px) {
     .property-table .p3 {
         display: none;
     }
+
+    .p1 .lang {
+        width: 60%;
+    }
+    .p2 {
+        width: 15%; 
+    }
+    .p4 {
+        width: 30%;
+    }
+    .p5 {
+        width: 15%;
+    }
+
     .property-table td, .property-table th {
         max-width: 100px;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+}
+@media screen and (max-width: 650px) {
+    .p1 .lang {
+        width: 50%;
+    }
+    .p2 {
+        width: 15%; 
+    }
+    .p4 {
+        width: 35%;
+    }
+    .p5 {
+        width: 20%;
     }
 }
 @media screen and (max-width: 600px) {

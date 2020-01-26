@@ -17,7 +17,7 @@
         </a>
         <a href="/bonds">
             <li <?php if($navigation == 'bonds'){?>class="active"<?php } ?>>
-                <h3>Anleih</h3>
+                <h3>Anleihe</h3>
             </li>
         </a>
         <a href="/reits">

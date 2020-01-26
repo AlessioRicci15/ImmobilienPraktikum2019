@@ -1,5 +1,5 @@
-<input type="text" id="serchinputadresse" onchange="searchAdresse()" onkeyup="searchAdresse()" onkeydown="searchAdresse()" onkeypress="searchAdresse()" placeholder="Search for adresse..." >
-<div class="property-table">
+<input type="text" id="serchinputadresse" onchange="searchAdresse()" onkeyup="searchAdresse()" onkeydown="searchAdresse()" onkeypress="searchAdresse()" placeholder=" Search for adresse..." >
+<input type="text" id="serchinputcountry" onchange="searchCountry()" onkeyup="searchCountry()" onkeydown="searchCountry()" onkeypress="searchCountry()" placeholder=" Search for country..." ><div class="property-table">
     <table border="1" class="allPropertiesTable">
         <thead>
             <tr>
