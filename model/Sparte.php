@@ -15,7 +15,7 @@
         function getSparte(){
             return $this->Sparte;
         }
-        public function orderedparten(){
+        public function orderedsparten(){
             global $conn;
             $spartenliste = "SELECT `sparte`.`Sparten_ID`, 
                                    `sparte`.`Sparte`
