@@ -1,0 +1,7 @@
+.propertydetail_map #map{
+    height: 350px;
+    width: 75%;
+}
+.propertydetail_map.hidden {
+    display: none;
+}
