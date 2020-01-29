@@ -13,6 +13,14 @@ $css = array(
     'nav.css',
     '../components/propertytable/propertytable.css',
     '../components/propertydetail/propertydetail.css',
+    '../components/stocktable/stocktable.css',
+    '../components/stockdetail/stockdetail.css',
+    '../components/reittable/reittable.css',
+    '../components/reitdetail/reitdetail.css',
+    '../components/etftable/etftable.css',
+    '../components/etfdetail/etfdetail.css',
+    '../components/bondtable/bondtable.css',
+    '../components/bonddetail/bonddetail.css',
     'text.css'
 );
 $css_content = '';

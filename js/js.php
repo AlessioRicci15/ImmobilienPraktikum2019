@@ -5,6 +5,22 @@ $js = array(
     '../components/propertydetail/propertydetail.js',
     '../components/propertyedit/propertyedit.js',
     '../components/propertycreate/propertycreat.js',
+    '../components/stocktable/stockstable.js',
+    '../components/stockdetail/stockdetail.js',
+    '../components/stockedit/stockedit.js',
+    '../components/stockcreate/stockcreat.js',
+    '../components/bondtable/bondstable.js',
+    '../components/bonddetail/bonddetail.js',
+    '../components/bondedit/bondedit.js',
+    '../components/bondcreate/bondcreat.js',
+    '../components/reittable/reitstable.js',
+    '../components/reitdetail/reitdetail.js',
+    '../components/reitedit/reitedit.js',
+    '../components/reitcreate/reitcreat.js',
+    '../components/etftable/etfstable.js',
+    '../components/etfdetail/etfdetail.js',
+    '../components/etfedit/etfedit.js',
+    '../components/etfcreate/etfcreat.js',
     'template.js'
 
 );
